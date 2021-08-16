@@ -1,0 +1,26 @@
+  <ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Medications
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item lines="none" class="mt-2">
+    <ion-searchbar showCancelButton="focus" mode="ios" placeholder="Search" [(ngModel)]="searchTerm" animated>
+    </ion-searchbar>
+  </ion-item>
+
+
+  <ion-list *ngFor="let drug of drugs | filter:searchTerm">
+    <ion-item (click)="openItem('drugs-content/' + drug.level )" lines="full">
+      <ion-label>
+        {{drug.name}}
+      </ion-label>
+      <ion-icon name="medical-outline" size="large" slot="start"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "logan-city-hk": {
+      "hosting": {
+        "app": [
+          "logan-city-hk"
+        ]
+      }
+    }
+  }
+}

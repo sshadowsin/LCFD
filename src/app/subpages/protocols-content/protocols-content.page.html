@@ -1,0 +1,213 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-label>Protocols {{level}}</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content>
+
+  <ion-item lines="none" class="m-2">
+    <ion-searchbar placeholder="Search Keyword" [(ngModel)]="searchTerm" animated=true mode="ios"></ion-searchbar>
+  </ion-item>
+
+  <ion-item>
+    <p class="p-4" [innerHtml]=" text | highlight: searchTerm">
+    </p>
+  </ion-item>
+
+</ion-content> -->
+
+
+
+<ion-content padding="true" class="has-header">
+
+  <div class="mx-3">
+
+
+    <h1 id="airwayAndTracheostomyManagement-heading58" class="f-1" style="color:#000000;text-align:center;" [innerHtml]="name"></h1>
+    <div class="spacer" style="height: 17px;"></div>
+    <div id="airwayAndTracheostomyManagement-container2">
+      <div id="airwayAndTracheostomyManagement-markdown76" class="show-list-numbers-and-dots"></div>
+    </div>
+    <h2 style="background-color:yellow;text-align:center" class="f-3">
+      ALL PROVIDERS
+    </h2>
+    <div id="airwayAndTracheostomyManagement-markdown77" class="show-list-numbers-and-dots">
+      <ul *ngFor="let provider of providerPoints">
+        <li>
+          <p [innerHtml]="provider.head"></p>
+          <ul *ngFor="let point of provider.points">
+            <li [innerHtml]="point"></li>
+          </ul>
+        </li>
+      </ul>
+      <ul *ngFor="let providerMain of providerMainPoints">
+        <li>
+          <strong [innerHtml] = "providerMain.head"></strong>
+          <ul *ngFor="let mainPoint of providerMain.points">
+            <li>
+              <p [innerHtml] = "mainPoint.head"></p>
+              <ul *ngFor="let mainSubPoint of mainPoint.subpoints">
+                <li [innerHtml] = "mainSubPoint"></li>
+              </ul>
+            </li>
+            <!-- <li>Always ensure proper care of the C-spine during airway treatment per
+              <strong>
+                <a href="#/Tabs_Controller/tab3/38_Spinal_Motion_Restriction">Protocol 38 Spinal Motion Restriction</a>
+              </strong>
+            </li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="airwayAndTracheostomyManagement-markdown79" class="show-list-numbers-and-dots"></div>
+    <div id="airwayAndTracheostomyManagement-markdown92" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <div class="spacer" style="width: 748px; height: 25px;"></div>
+    <h2 style="background-color:Blue;text-align:center ; color: white;" class="f-3">
+      EMT-QRU First Responder
+    </h2>
+
+    <div id="airwayAndTracheostomyManagement-markdown2080" class="show-list-numbers-and-dots" *ngFor="let emtMain of emtMainPoints">
+      <p style="color:#000000;">
+        <strong [innerHtml]="emtMain.head"></strong>
+        <br>
+        <span [innerHtml]="emtMain.note"></span>
+      </p>
+
+      <ul *ngFor="let emtPoint of emtMain.points">
+        <li>
+          <p [innerHtml]="emtPoint.head"></p>
+          <ul *ngFor="let emtSubPoint of emtPoint.subpoints">
+            <li [innerHtml]="emtSubPoint"></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="spacer" style="width: 748px; height: 25px;"></div>
+
+    </div>
+
+    <div id="airwayAndTracheostomyManagement-markdown93" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <h2 style="background-color:green;text-align:center ; color: white;" class="f-3">
+      AEMT
+    </h2>
+    <div id="airwayAndTracheostomyManagement-markdown2434" class="show-list-numbers-and-dots" *ngFor="let aemtMain of aemtMainPoints">
+      <p style="color:#000000;">
+        <strong [innerHtml]="aemtMain.head"></strong>
+      </p>
+
+      <ul *ngFor="let aemtPoint of aemtMain.points">
+        <li [innerHtml] = "aemtPoint.subhead"></li>
+      </ul>
+
+      <div class="spacer" style="width: 748px; height: 25px;"></div>
+
+    </div>
+
+
+    <div id="airwayAndTracheostomyManagement-markdown93" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <div id="airwayAndTracheostomyManagement-markdown2434" class="show-list-numbers-and-dots" style="background-color:magenta;text-align:center ; color: white;">
+      <p>
+        <strong [innerHtml]="aemtPinkPoint"></strong>
+      </p>
+
+      <ul *ngFor="let pinkPoint of aemtPinkPointSub">
+        <li [innerHtml] = "pinkPoint"></li>
+      </ul>
+
+      <div class="spacer" style="width: 748px; height: 25px;"></div>
+
+    </div>
+
+
+
+    <div id="airwayAndTracheostomyManagement-button-bar41" class="button-bar">
+      <a href="tel:(435) 753-2847" id="airwayAndTracheostomyManagement-button9" style="border-radius:31px 31px 31px 31px;"
+        class="button button-energized button-block icon ion-ios-telephone"> Cache Valley Hospital</a>
+      <a href="tel:(435) 755-6642" id="airwayAndTracheostomyManagement-button10"
+        style="border-radius:31px 31px 31px 31px;" class="button button-energized button-block icon ion-ios-telephone">
+        Logan Regional Hospital</a>
+    </div>
+
+    <div id="airwayAndTracheostomyManagement-markdown91" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <h2 style="background-color:red;text-align:center ; color: white;" class="f-3">
+      Paramedic
+    </h2>
+
+    <div id="airwayAndTracheostomyManagement-markdown83" class="show-list-numbers-and-dots" *ngFor="let paramedicMain of paramedicMainPoints">
+      <p style="color:#000000;">
+        <strong [innerHtml]="paramedicMain.head"></strong>
+        <br>
+        <span [innerHtml] = "paramedicMain.note"></span>
+      </p>
+
+      <ul *ngFor="let paramedicMainPoint of paramedicMain.points">
+        <li>
+          <p [innerHtml]="paramedicMainPoint.subhead"></p>
+          <ul *ngFor="let paramedicSubPoint of paramedicMainPoint.subpoints">
+            <li [innerHtml] = "paramedicSubPoint"></li>
+          </ul>
+        </li>
+        <div class="spacer" style="width: 748px; height: 25px;"></div>
+      </ul>
+
+      <div class="spacer" style="width: 748px; height: 25px;"></div>
+
+    </div>
+
+
+    <div id="deathDeterminationAndTerminationOfResuscitation-markdown2525" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <h2 style="background-color:black;text-align:center ; color: white;" class="f-3">
+      KEY POINTS/CONSIDERATIONS
+    </h2>
+    <div id="deathDeterminationAndTerminationOfResuscitation-markdown2530" class="show-list-numbers-and-dots">
+      <ul *ngFor="let keyPoint of keyPoints">
+        <li [innerHtml] = "keyPoint"></li>
+      </ul>
+    </div>
+
+
+    <div id="airwayAndTracheostomyManagement-button-bar42" class="button-bar">
+      <a href="tel:(435) 753-2847" id="airwayAndTracheostomyManagement-button14"
+        style="border-radius:31px 31px 31px 31px;"
+        class="button button-energized button-block icon ion-ios-telephone">Cache Valley Hospital</a>
+      <a href="tel:(435) 755-6642" id="airwayAndTracheostomyManagement-button15"
+        style="border-radius:31px 31px 31px 31px;"
+        class="button button-energized button-block icon ion-ios-telephone">Logan Regional Hospital</a>
+    </div>
+
+    <div class="spacer" style="width: 748px; height: 25px;"></div>
+
+    <div id="airwayAndTracheostomyManagement-button-bar43" class="button-bar">
+      <a href="tel:435-753-2847" id="airwayAndTracheostomyManagement-button17" style="border-radius:31px 31px 31px 31px;"
+        class="button button-energized button-block">Cache Valley Hospital</a>
+      <a href="tel:4357556642" id="airwayAndTracheostomyManagement-button18" style="border-radius:31px 31px 31px 31px;"
+        class="button button-energized button-block">Logan Regional Hospital</a>
+    </div>
+    <div></div>
+    <div id="airwayAndTracheostomyManagement-markdown101" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <div class="spacer" style="height: 20px;"></div>
+
+
+
+  </div>
+
+
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-label>{{name}}</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <div *ngFor="let head of headings">
+      <div *ngFor="let image of images">
+        <h1 class="text-center">{{head}}</h1>
+        <img src="../../../assets/{{image}}" alt="" class="img-fluid">
+      </div>
+    </div>
+  </ion-item>
+
+  <ion-item *ngIf="contacts">
+    <div *ngFor="let number of contacts">
+      <a href="tel:+{{number}}">{{number}}</a><br>
+    </div>
+  </ion-item>
+</ion-content>

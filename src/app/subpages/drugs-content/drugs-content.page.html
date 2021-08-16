@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item lines="none" class="m-2">
+    <ion-searchbar placeholder="Search Keyword" [(ngModel)]="searchTerm" animated=true mode="ios"></ion-searchbar>
+  </ion-item>
+
+
+  <div class="mx-3">
+
+    <h1 class="text-center f-1">{{name}}</h1>
+
+    <div class="box">
+      <h3>Action/Mechanism:</h3>
+      <p [innerHtml]="action | highlight:searchTerm"></p>
+    </div>
+    <div class="box">
+      <div>
+        <h3 class="f-2">Indication: </h3>
+        <p [innerHtml]="indication | highlight:searchTerm"></p>
+      </div>
+      <div>
+        <h3 class="f-2">Contraindication: </h3>
+        <p [innerHtml]="contradiction | highlight:searchTerm"></p>
+      </div>
+      <div>
+        <h3 class="f-2">Precaution: </h3>
+        <p [innerHtml]="precaution | highlight:searchTerm"></p>
+      </div>
+      <div>
+        <h3 class="f-2">Adverse Effects: </h3>
+        <p [innerHtml]="effect | highlight:searchTerm"></p>
+      </div>
+      <div>
+        <h3 class="f-2">Considerations:</h3>
+        <div *ngFor="let consideration of consideration">
+          <p [innerHtml]="consideration"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 class="f-2">Dose:</h3>
+      <p [innerHtml]="note"></p>
+      <div *ngFor="let item of dose" class="mx-2">
+        <p [innerHtml]="item | highlight:searchTerm"></p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>How to make:</h3>
+      <div *ngFor="let recipe of htm">
+        <p [innerHtml]="recipe"></p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</ion-content>

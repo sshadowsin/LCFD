@@ -1,0 +1,7 @@
+{
+  "name": "logan-city",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

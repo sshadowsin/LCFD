@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Protocols
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item lines="none" class="mt-2">
+    <ion-searchbar showCancelButton="focus" mode="ios" placeholder="Search" animated [(ngModel)]="searchTerm2">
+    </ion-searchbar>
+  </ion-item>
+
+  <!-- <div>
+    <h1 class="text-center f-1">Introduction</h1>
+    <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/0')">
+      <ion-label>{{protocols[0]}}</ion-label>
+      <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+    </ion-item>
+  </div> -->
+
+
+  <ion-list *ngFor="let protocol of protocols | filter:searchTerm2; let i = index;">
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===0">Introduction</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===1">General Patient Care Guidelines</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===9">CARDIAC PATIENT CARE GUIDELINES</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===16">MEDICAL PATIENT CARE GUIDELINES</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===31">TRAUMA PATIENT CARE GUIDELINES</h1>
+    <ion-item (click)="openProtocol('protocols-content/'+i)" lines="none" class="proto-div">
+      <ion-label>{{protocol.name}}</ion-label>
+      <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+
+
+  <!-- <div>
+    <h1 class="text-center f-1">General Patient Care Guidelines</h1>
+
+    <div *ngFor="let protocol of protocols | filter:searchTerm; let i = index;">
+      <div *ngIf=" i>0 && i<9">
+        <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
+          <ion-label>{{protocol}}</ion-label>
+          <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <h1 class="text-center f-1">CARDIAC PATIENT CARE GUIDELINES</h1>
+
+    <div *ngFor="let protocol of protocols; let i = index;">
+      <div *ngIf=" i>8 && i<16">
+        <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
+          <ion-label>{{protocol}}</ion-label>
+          <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h1 class="text-center f-1">MEDICAL PATIENT CARE GUIDELINES</h1>
+
+    <div *ngFor="let protocol of protocols; let i = index;">
+      <div *ngIf=" i>15 && i<31">
+        <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
+          <ion-label>{{protocol}}</ion-label>
+          <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h1 class="text-center f-1">TRAUMA PATIENT CARE GUIDELINES</h1>
+
+    <div *ngFor="let protocol of protocols; let i = index;">
+      <div *ngIf=" i>30 && i<39">
+        <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
+          <ion-label>{{protocol}}</ion-label>
+          <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+  </div> -->
+
+</ion-content>
