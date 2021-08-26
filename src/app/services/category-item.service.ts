@@ -9,6 +9,7 @@ export class CategoryItemService {
   subPointsHeading: string[];
   subPoints: any[];
   footerText: string;
+  image: string;
   protocols: string[];
 
   introduction: boolean;
@@ -60,7 +61,7 @@ export class CategoryItemService {
         ];
         this.footerText =
           'Magenta highlights means drugs we currently don’t carry.';
-
+        this.image =null;
         this.protocols = [
           'Protocol 01: AIRWAY AND TRACHEOSTOMY MANAGEMENT',
           'Protocol 02: ALTERED MENTAL STATUS',
@@ -105,7 +106,7 @@ export class CategoryItemService {
         ];
         this.footerText =
           'Magenta highlights means drugs we currently don’t carry.';
-
+          this.image =null;
         this.protocols = [
           'Protocol 09: CARDIAC ARREST',
           'Protocol 10: BRADYCARDIA (Symptomatic)',
@@ -149,7 +150,7 @@ export class CategoryItemService {
         ];
         this.footerText =
           'Magenta highlights means drugs we currently don’t carry.';
-
+          this.image =null;
         this.protocols = [
           'Protocol 16: ALLERGIC REACTION / ANAPHYLAXIS',
           'Protocol 17 : DROWNING OR SUBMERSION',
@@ -207,6 +208,7 @@ export class CategoryItemService {
         ];
         this.footerText =
           'Magenta highlights means drugs we currently don’t carry.';
+          this.image ='trauma-care.png';
 
         this.protocols = [
           'Protocol 31: GENERAL TRAUMA MANAGEMENT',
@@ -228,6 +230,7 @@ export class CategoryItemService {
         this.footerText = null;
         this.protocols = null;
         this.introduction = false;
+        this.image = null;
         break;
     }
   }

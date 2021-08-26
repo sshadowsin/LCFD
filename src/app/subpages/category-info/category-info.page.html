@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="primary" *ngIf="level !== '5'">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref = "inside/tabs/category-content/{{level}}" >
+      </ion-back-button>
+    </ion-buttons>
+    <ion-label>{{name}}</ion-label>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary" *ngIf="level === '5'">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref = "inside/tabs/category-content/4" >
+      </ion-back-button>
+    </ion-buttons>
+    <ion-label>Utah Trauma System Advisory Committee</ion-label>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content *ngIf="level !== '5'">
+  <ion-item>
+    <div class="d-block">
+      <h1 class="f-1 text-center">{{name}}</h1>
+      <p [innerHtml]=" discription" class="text-center mt-3">
+      </p>
+    </div>
+  </ion-item>
+
+  <div *ngIf="subPointsHeading">
+    <div *ngFor="let heading of subPointsHeading; let i = index" class="mx-3">
+      <h6 [innerHtml]="heading" class="f-2 mb-3"></h6>
+      <div *ngFor="let point of subPoints[i].points">
+        <p [innerHtml]="point" class="my-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <ion-item *ngIf="footerText">
+    <p [innerHtml]="footerText" class="magenta"></p>
+  </ion-item>
+
+  <ion-item *ngIf="image">
+    <img src="../../../assets/{{image}}" alt="">
+  </ion-item>
+</ion-content>
+
+
+<ion-content *ngIf="level === '5'">
+  <div class="mx-3">
+    <div class="spacer" style="height: 17px;"></div>
+    <div id="utahTraumaSystemAdvisoryCommittee-container160">
+      <div id="utahTraumaSystemAdvisoryCommittee-markdown2596" class="show-list-numbers-and-dots"></div>
+    </div>
+    <div id="utahTraumaSystemAdvisoryCommittee-markdown2598" class="show-list-numbers-and-dots"></div>
+    <div id="utahTraumaSystemAdvisoryCommittee-markdown2599" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <h2 style="background-color:magenta;text-align:center ;font-size: 24px; color: Black;">
+      <p>•
+        <b>Utah Trauma System Advisory Committee</b>
+      </p>
+
+    </h2>
+    <div id="utahTraumaSystemAdvisoryCommittee-markdown2600" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <h2 style="background-color:magenta;text-align:center ;font-size: 18px; color: Black;">
+      <p>•
+        <b>Guidelines for transport of Trauma Patients to Freestanding Emergency Departments</b>
+      </p>
+
+    </h2>
+    <h2 style="background-color:magenta;text-align:left ;font-size: 14px; color: Black;">
+      <p>• The following types of patients are NOT candidates for transport to a freestanding ED (FSED):
+        <br>
+      </p>
+      <blockquote> • Critically-injured patients with unstable vital signs or other life-threatening conditions UNLESS the patient’s airway is not maintainable with EMS advanced or basic airway management techniques and the FSED is the closest ED
+        <p></p>• Traumatic cardiac arrest patients
+        <p></p>• Patients meeting Steps 1-3 criteria of the Utah Trauma Field Triage Guidelines
+        <p></p>• Patients with head injuries who are over 65 years old OR who are taking anticoagulants
+        <p></p>• Patients with angulated long bone fractures
+        <p></p>• Patients with suspected open fractures or dislocations
+        <p></p>• EMS provider judgement
+        <p></p>
+      </blockquote>
+    </h2>
+    <div id="utahTraumaSystemAdvisoryCommittee-markdown2603" class="show-list-numbers-and-dots">
+      <hr>
+    </div>
+    <h2 style="background-color:magenta;text-align:center ;font-size: 18px; color: Black;">
+      <p>•
+        <b>THESE GUIDELINES MAY BE MODIFIED DURING A DISASTER SITUATION</b>
+      </p>
+
+    </h2>
+
+  </div>
+</ion-content>

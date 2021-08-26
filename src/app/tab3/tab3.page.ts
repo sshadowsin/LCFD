@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -7,7 +7,8 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss'],
 })
 export class Tab3Page {
-  searchTerm2: string;
+  searchTerm2: string = null;
+
   protocols = [
     {
       name: 'Introduction to CCEMS Protocols',
@@ -59,9 +60,21 @@ export class Tab3Page {
     { name: 'Protocol 37: SNAKE BITES' },
     { name: 'Protocol 38: SPINAL MOTION RESTRICTION (SMR)' },
   ];
-  constructor(private navCtrl: NavController) {}
+  constructor(
+    private navCtrl: NavController,
+    private platform: Platform
+    ) {
+      this.platform.backButton.subscribe(
+        () => {
+          this.searchTerm2 = null;
+          this.navCtrl.navigateBack('inside/tabs/tab1');
+        }
+      );
+    }
 
   openProtocol(routurl) {
+    this.searchTerm2 = null;
     this.navCtrl.navigateForward(routurl);
   }
+
 }

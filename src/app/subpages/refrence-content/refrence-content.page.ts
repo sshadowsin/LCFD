@@ -13,7 +13,7 @@ export class RefrenceContentPage implements OnInit {
  name: string;
  images: string[];
  headings: string[];
- contacts: string[];
+ contacts: any[];
 
  constructor(
     private content: RefrenceContentService,

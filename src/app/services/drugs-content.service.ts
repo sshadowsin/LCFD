@@ -15,6 +15,7 @@ export class DrugsContentService {
   consideration: string[];
   note: string;
   htm: string[];
+  refrenceProtocol: any[];
 
   constructor() {}
 
@@ -22,6 +23,16 @@ export class DrugsContentService {
     switch (level) {
       case '0': {
         this.name = 'Acetaminophen (Tylenol)';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+          {
+            name: 'Protocol 18: FEVER MANAGEMENT',
+            link: 'inside/tabs/protocols-content/18',
+          },
+        ];
         this.action =
           'An analgesic/antipyretic that has weak anti-inflammatory activity and no effects on platelets or bleeding time.  Acetaminophen acts both centrally and peripherally via multiple enzymatic processes. The most significant appears to be peroxidase inhibition which yields COX-2 inhibitor-like effects';
         this.indication = 'Fever. Minor pain.';
@@ -33,7 +44,7 @@ export class DrugsContentService {
           '<strong>Adult:</strong> PO/Rectal 650-1000mg',
           '<strong>Pediatric:</strong> 15mg/kg PO/Rectal; Max 650 mg',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -57,10 +68,16 @@ export class DrugsContentService {
           '●	Repeat 12mg. in 1-2 minutes if needed. ',
           '●	<strong>Pediatric:</strong> Initial- 0.1 mg/kg (Max 6mg), if not effective- 0.2 mg/kg (Max 12mg) ',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
-      break;
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 15: TACHYCARDIA (With a Pulse)',
+            link: 'inside/tabs/protocols-content/15',
+          },
+        ];
+        break;
       }
 
       case '2': {
@@ -85,11 +102,39 @@ export class DrugsContentService {
         ];
         this.note = null;
         this.htm = null;
- break;
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 16: ALLERGIC REACTION / ANAPHYLAXIS',
+            link: 'inside/tabs/protocols-content/16',
+          },
+          {
+            name: 'Protocol 17 : DROWNING OR SUBMERSION',
+            link: 'inside/tabs/protocols-content/17',
+          },
+          {
+            name: 'Protocol 20: OBSTETRICAL EMERGENCIES',
+            link: 'inside/tabs/protocols-content/20',
+          },
+          {
+            name: 'Protocol 22: RESPIRATORY DISTRESS',
+            link: 'inside/tabs/protocols-content/22',
+          },
+        ];
+        break;
       }
 
       case '3': {
         this.name = 'Amiodarone Hydrochloride (Cordarone) ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 09: CARDIAC ARREST',
+            link: 'inside/tabs/protocols-content/9',
+          },
+          {
+            name: 'Protocol 15: TACHYCARDIA (With a Pulse)',
+            link: 'inside/tabs/protocols-content/15',
+          },
+        ];
         this.action =
           'Blocks sodium channels at rapid pacing frequencies, causing an increase in the duration of the myocardial cell action potential and refractory period, as well as alpha- and beta-adrenergic blockade. The drug decreases sinus rate increases PR and QT intervals, results in development of U waves, and changes T-wave contour. After IV use, amiodarone relaxes vascular smooth muscle, reduces peripheral vascular resistance (afterload), and increases cardiac index slightly. ';
         this.indication =
@@ -119,6 +164,12 @@ export class DrugsContentService {
 
       case '4': {
         this.name = 'Aspirin (Ecotrin)  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 11: CARDIAC CHEST PAIN (ACUTE CORONARY SYNDROME)',
+            link: 'inside/tabs/protocols-content/11',
+          },
+        ];
         this.action =
           'Irreversibly inhibits cyclooxygenase-1 and 2 (COX-1 and 2) enzymes, via acetylation, which results in decreased formation of prostaglandin precursors; irreversibly inhibits formation of prostaglandin derivative, thromboxane A2, via acetylation of platelet cyclooxygenase, thus inhibiting platelet aggregation; analgesic, and anti-inflammatory properties';
         this.indication = 'Cardiac chest pain patients fitting criteria ';
@@ -132,14 +183,24 @@ export class DrugsContentService {
           '●	Adult: 162 mg-325 mg oral- chewed once (chewable tabs preferred) ',
           '●	Pediatric: Do not use unless ordered by OLMC',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
       }
 
       case '5': {
-        this.name = 'Atropine   ';
+        this.name = 'Atropine';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 10: BRADYCARDIA (Symptomatic)',
+            link: 'inside/tabs/protocols-content/10',
+          },
+          {
+            name: 'Protocol 29: TOXIC EXPOSURE - ORGANOPHOSPHATES / NERVE AGENTS',
+            link: 'inside/tabs/protocols-content/29',
+          },
+        ];
         this.action =
           'Anticholinergic that inhibits acetylcholine at the parasympathetic neuroeffector junction, blocking vagal effects on the SA and AV nodes; this enhances conduction through the AV node and speeds heart rate, increases heart contractility, improves automaticity, and dilates peripheral vessels which increases cardiac output. Atropine dries secretions by reversing the muscarinic effects of cholinergic poisoning due to agents with acetylcholinesterase inhibitor activity by acting as a competitive antagonist of acetylcholine at muscarinic receptors. The primary goal in cholinergic poisonings is reversal of bronchorrhea and bronchoconstriction. Atropine has no effect on the nicotinic receptors responsible for muscle weakness, fasciculations, and paralysis.';
         this.indication =
@@ -160,7 +221,7 @@ export class DrugsContentService {
           '●	Control of bronchoconstriction, (as reflected by level of oxygenation and ease of ventilation) ',
           '●	Reversed dangerous bradyarrhythmia’s or AV-blocks',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -168,6 +229,16 @@ export class DrugsContentService {
 
       case '6': {
         this.name = 'Calcium Chloride/ Calcium Gluconate ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 09: CARDIAC ARREST',
+            link: 'inside/tabs/protocols-content/9',
+          },
+          {
+            name: 'Protocol 28: TOXIC EXPOSURE - HYDROFLUORIC ACID',
+            link: 'inside/tabs/protocols-content/28',
+          },
+        ];
         this.action =
           'Electrolyte. Calcium is a positively charged ion involved in multiple physiologic functions. Calcium is required for muscle contraction, nerve impulse transmission, hormone secretion, blood coagulation, cell division, cell motility and wound healing. In vascular smooth muscle, calcium is involved in the maintenance of vascular tone. Calcium is also required for cardiac muscle contraction. The entry of calcium into cardiac cells during depolarization triggers additional intracellular calcium release from the sarcoplasmic reticulum, leading to myocardial contraction. The cardiac pacemaker cells of the SA and AV nodes depend on an inward calcium current for depolarization. Calcium antagonizes the effects of both potassium and magnesium at the cell membrane. In hyperkalemia, calcium antagonizes cardiac membrane excitability. It has no effect on the serum potassium level. The effect of cardiac membrane stabilization is temporary (20-40 min) and some patients may require a repeat dose.  ';
         this.indication =
@@ -186,7 +257,7 @@ export class DrugsContentService {
           'o	Calcium Chloride: 20mg/kg (max 1 gm/dose) SLOW PUSH IV/IO. May      repeat once after 10 minutes',
           'o	Calcium Gluconate: 100 mg/kg IV/IO (max 3 grams/dose). May repeat once after 10 min.',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -194,6 +265,12 @@ export class DrugsContentService {
 
       case '8': {
         this.name = 'Diphenhydramine (Benadryl)  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 16: ALLERGIC REACTION / ANAPHYLAXIS',
+            link: 'inside/tabs/protocols-content/16',
+          },
+        ];
         this.action =
           'Competes with histamine for H1-receptor sites on effector cells. Prevents, but does not reverse, histamine-mediated responses. It also has anticholinergic (antispasmodic), antiemetic, and sedative effects. It has a rapid onset and is widely distributed throughout the body. ';
         this.indication =
@@ -209,7 +286,7 @@ export class DrugsContentService {
           '●	Pediatric: 1 mg/kg IM/IV/PO (Max 50mg) ',
           '●	Children may be more prone to paradoxical responses than adults',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -217,6 +294,16 @@ export class DrugsContentService {
 
       case '9': {
         this.name = 'Dextrose  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 13: NEWBORN RESUSCITATION',
+            link: 'inside/tabs/protocols-content/13',
+          },
+          {
+            name: 'Protocol 19: GLUCOSE EMERGENCIES',
+            link: 'inside/tabs/protocols-content/19',
+          },
+        ];
         this.action =
           'Dextrose provides calories and increases blood glucose concentrations.  ';
         this.indication =
@@ -233,7 +320,7 @@ export class DrugsContentService {
           'o	D10W 5 ml/kg (0.5 gm/kg) IV- Max 12.5 gm (125 ml) [Preferred for everyone] ',
           'o	D25W 2ml/kg (0.5 gm/kg) IV (only for >1year old) Max 12.5gm(50mL)',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.htm = null;
         this.note =
           'Vesicant (at concentrations ≥10%); ensure proper needle or catheter placement prior to and during IV infusion. Avoid extravasation. If extravasation occurs, stop infusion immediately and disconnect. Remove needle/cannula; apply dry cold compresses; elevate extremity.';
@@ -242,6 +329,28 @@ export class DrugsContentService {
 
       case '10': {
         this.name = 'Epinephrine (Adrenaline)  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 09: CARDIAC ARREST',
+            link: 'inside/tabs/protocols-content/9',
+          },
+          {
+            name: 'Protocol 10: BRADYCARDIA (Symptomatic)',
+            link: 'inside/tabs/protocols-content/10',
+          },
+          {
+            name: 'Protocol 13: NEWBORN RESUSCITATION',
+            link: 'inside/tabs/protocols-content/13',
+          },
+          {
+            name: 'Protocol 16: ALLERGIC REACTION / ANAPHYLAXIS',
+            link: 'inside/tabs/protocols-content/16',
+          },
+          {
+            name: 'Protocol 22: RESPIRATORY DISTRESS',
+            link: 'inside/tabs/protocols-content/22',
+          },
+        ];
         this.action =
           'Stimulates alpha and beta-adrenergic receptors within the sympathetic nervous system. A potent cardiac stimulant, it strengthens the myocardial contraction (positive inotropic effect) and increases cardiac rate (positive chronotropic effect). Increases myocardial and cerebral blood flow during CPR. ';
         this.indication =
@@ -263,13 +372,51 @@ export class DrugsContentService {
           'o	For STRIDOR: Epinephrine 2mg (2mL of 1 mg/mL; 1:1000) added to 3mL of Normal Saline via nebulizer.',
           'o	 For Anaphylaxis: 0.01 mg/kg (0.01 mL/kg of 1 mg/mL; 1:1000) IM up to 0.3 mg if patient was exposed to commonly recognized allergen and has respiratory distress or hypotension.',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
       }
       case '12': {
         this.name = 'Epinephrine – “Push Dose” Pressor Administration';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 08: SHOCK, SEPSIS, & FLUID THERAPY',
+            link: 'inside/tabs/protocols-content/8',
+          },
+          {
+            name: 'Protocol 10: BRADYCARDIA (Symptomatic)',
+            link: 'inside/tabs/protocols-content/10',
+          },
+          {
+            name: 'Protocol 12: CONGESTIVE HEART FAILURE PULMONARY EDEMA',
+            link: 'inside/tabs/protocols-content/12',
+          },
+          {
+            name: 'Protocol 17 : DROWNING OR SUBMERSION',
+            link: 'inside/tabs/protocols-content/17',
+          },
+          {
+            name: 'Protocol 21: OPIOID OVERDOSE',
+            link: 'inside/tabs/protocols-content/21',
+          },
+          {
+            name: 'Protocol 26: TOXIC EXPOSURE - CARBON MONOXIDE',
+            link: 'inside/tabs/protocols-content/26',
+          },
+          {
+            name: 'Protocol 27: TOXIC EXPOSURE – CYANIDE',
+            link: 'inside/tabs/protocols-content/27',
+          },
+          {
+            name: 'Protocol 34: HEAD INJURY (TRAUMATIC BRAIN INJURY)',
+            link: 'inside/tabs/protocols-content/34',
+          },
+          {
+            name: 'Protocol 37: SNAKE BITES',
+            link: 'inside/tabs/protocols-content/37',
+          },
+        ];
         this.action =
           'Stimulates alpha and beta-adrenergic receptors within the sympathetic nervous system. A potent cardiac stimulant, it strengthens the myocardial contraction (positive inotropic effect) and increases cardiac rate (positive chronotropic effect). ';
         this.indication =
@@ -300,13 +447,23 @@ export class DrugsContentService {
           'o	Inject epinephrine 1mg into NS 100 mL bag',
           'o	You now have 100 mL of epinephrine 10mcg/mL',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         break;
       }
 
       case '13': {
         this.name = 'Fentanyl';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+          {
+            name: 'Protocol 11: CARDIAC CHEST PAIN (ACUTE CORONARY SYNDROME)',
+            link: 'inside/tabs/protocols-content/11',
+          },
+        ];
         this.action =
           'Fentanyl is a potent synthetic narcotic with similar actions to those of Morphine and Demerol, but action is more prompt (<5min) and less prolonged (half-life 90 min). Fentanyl exhibits less hemodynamic effects than does Morphine or Demerol. Fentanyl is also less likely to cause nausea/vomiting.  ';
         this.indication =
@@ -323,7 +480,7 @@ export class DrugsContentService {
           '●	Pediatric: 0.5-1 mcg/km slowly IV/IM. Max Dose: 50 mcg. ',
           'o	2 mcg/kg Nasal Max Dose= 100 mcg (administer ½ in each nostril)',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -331,6 +488,12 @@ export class DrugsContentService {
 
       case '14': {
         this.name = 'Glucagon (GlucaGen)';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 19: GLUCOSE EMERGENCIES',
+            link: 'inside/tabs/protocols-content/19',
+          },
+        ];
         this.action =
           'Induces liver glycogen breakdown, releasing glucose from the liver. Blood glucose is raised within 10 minutes. Has a half-life of 8 to 18 minutes.  ';
         this.indication = 'Treatment of severe hypoglycemia';
@@ -344,7 +507,34 @@ export class DrugsContentService {
           '●	Adult: Give 1 mg. IM, after reconstituting powder and sterile water, for symptomatic diabetic patient whose IV access has been difficult.  ',
           '●	Pediatric: 0.01-0.02 mg/kg (max dose of 1 mg) IM if no IV/IO access after reconstituting powder and sterile water, for symptomatic diabetic patient whose IV access has been difficult.',
         ];
-        this.consideration =null;
+        this.consideration = null;
+        this.note = null;
+        this.htm = null;
+        break;
+      }
+
+      case '15': {
+        this.name = 'Haloperidol (Haldol)';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 30: Violent Patient/Chemical Sedation/Taser Barb Removal',
+            link: 'inside/tabs/protocols-content/30',
+          },
+        ];
+        this.action =
+          '1. Depresses cerebral cortex.<br>2. Aids in reducing aggression.  ';
+        this.indication =
+          '1. Depresses cerebral cortex<br>2. Aids in reducing agression';
+        this.contradiction =
+          '1. Hypersensitivity<br>2. Alcohol or sedative drug usage is detected.  ';
+        this.precaution = 'None';
+        this.effect =
+          '1. Seizures<br>2. Hypotension<br>3. Sudden cardiac arrest - more common in elderly or use of psychotropic medications<br>4. Laryngospasm - respiratory depressiony ';
+        this.dose = [
+          '●	Adult: 5-10 mg IM or 2-5mg IV  ',
+          '●	Pediatric: <br>1. 6-12 years old: 1-3mg dose IM.<br>2. 12 years and older: 5-10 mg IM or 2-5mg IV/IO.<br>3. <6 years old - NOT RECOMMENDED',
+        ];
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -352,6 +542,12 @@ export class DrugsContentService {
 
       case '17': {
         this.name = 'Ibuprofen (Motrin/Advil) ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 30: VIOLENT PATIENT / CHEMICAL SEDATION / TASER BARB REMOVAL',
+            link: 'inside/tabs/protocols-content/30',
+          },
+        ];
         this.action =
           'Ibuprofen is a non-steroidal anti-inflammatory agent (NSAID) with analgesic effects, anti-inflammatory, and antipyretic effects. NSAIDs are thought to exert their effects by inhibiting prostaglandin synthesis by inhibiting the cyclooxygenase (COX) enzyme, which catalyzes the conversion of arachidonic acid to prostaglandin and endoperoxide. Prostaglandins are a modulator of inflammation and are also involved in thermoregulation, pain transmission, and platelet aggregation. ';
         this.indication = 'Mild to moderate pain.  Fever Control.';
@@ -365,7 +561,7 @@ export class DrugsContentService {
           '●	Adult: 400-600 mg PO q4-6h prn Max: 2400 mg/day) (DR BETZ WANTS WEIGHT BASED< RESEARCH FIRST)  ',
           '	●	Pediatric 6 months and older:  10 mg/kg PO (q6-8h prn) Max: 600mg',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -373,6 +569,12 @@ export class DrugsContentService {
 
       case '18': {
         this.name = 'Ipratropium (Atrovent)  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 22: RESPIRATORY DISTRESS',
+            link: 'inside/tabs/protocols-content/22',
+          },
+        ];
         this.action =
           'Inhibits vagally mediated reflexes by antagonizing acetylcholine at muscarinic receptors on bronchial smooth muscle. ';
         this.indication =
@@ -389,7 +591,7 @@ export class DrugsContentService {
           '●	Adult 0.5mg added to the nebulized albuterol.   ',
           '●	May repeat neb of albuterol 2.5 mg with ipratropium 0.5mg x 1',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -397,6 +599,16 @@ export class DrugsContentService {
 
       case '19': {
         this.name = 'Ketamine HCL ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+          {
+            name: 'Protocol 30: VIOLENT PATIENT / CHEMICAL SEDATION / TASER BARB REMOVAL',
+            link: 'inside/tabs/protocols-content/30',
+          },
+        ];
         this.action =
           'Ketamine is a dissociative anesthetic agent, structurally similar to phencyclidine (PCP). It is unique among sedative agents in that it provides analgesia along with its amnestic and sedative effects.  ';
         this.indication =
@@ -432,6 +644,12 @@ export class DrugsContentService {
 
       case '20': {
         this.name = 'Ketorolac (Toradol)  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+        ];
         this.action =
           'Inhibition of prostaglandin synthesis by competitive blocking of the enzyme cyclooxygenase (COX).  Ketorolac is a non-selective COX inhibitor.  Ketorolac is a potent non-steroidal anti-inflammatory drug (NSAID) often used as an analgesic.   ';
         this.indication =
@@ -445,7 +663,7 @@ export class DrugsContentService {
           '●	Adult: >60 year old 15mg IV/IO Single dose. ',
           '●  Pediatric: 0.5mg/kg IV (max 15mg), single dose only, ONLY FOR USE in patients over the age of 2.',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -453,6 +671,20 @@ export class DrugsContentService {
 
       case '21': {
         this.name = 'Lidocaine  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 09: CARDIAC ARREST',
+            link: 'inside/tabs/protocols-content/9',
+          },
+          {
+            name: 'Protocol 15: TACHYCARDIA (With a Pulse)',
+            link: 'inside/tabs/protocols-content/15',
+          },
+          {
+            name: 'Protocol 22: RESPIRATORY DISTRESS',
+            link: 'inside/tabs/protocols-content/22',
+          },
+        ];
         this.action =
           'Decreases ventricular excitability without depressing the force of ventricular contractions by increasing the stimulation threshold of the ventricle during diastole. Onset of action should occur within 2 minutes and last approximately 10 to 20 minutes. Metabolized in the liver and excreted in the urine';
         this.indication =
@@ -495,6 +727,24 @@ export class DrugsContentService {
 
       case '22': {
         this.name = 'Lorazepam  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+          {
+            name: 'Protocol 23: SEIZURES',
+            link: 'inside/tabs/protocols-content/23',
+          },
+          {
+            name: 'Protocol 25: TEMPERATURE AND ENVIRONMENTAL EMERGENCIES',
+            link: 'inside/tabs/protocols-content/25',
+          },
+          {
+            name: 'Protocol 30: VIOLENT PATIENT / CHEMICAL SEDATION / TASER BARB REMOVAL',
+            link: 'inside/tabs/protocols-content/30',
+          },
+        ];
         this.action =
           'Though the drug is still widely used as an anticonvulsant, it is relatively weak and of shorter duration than diazepam. Rapid IV administration may be followed by respiratory depression and excessive sedation. Lorazepam is frequently used to treat anxiety and stress. In emergency care, it is used to treat alcohol withdrawal and grand mal seizure activity. Benzodiazepines act on the limbic, thalamic, and hypothalamic regions of the CNS to potentiate the effects of inhibitory neurotransmitters, raising the seizure threshold in the motor cortex. It may also be used in conscious patients during cardioversion to induce amnesia and sedation.  ';
         this.indication =
@@ -524,6 +774,20 @@ export class DrugsContentService {
 
       case '23': {
         this.name = 'Magnesium Sulfate';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 20: OBSTETRICAL EMERGENCIES',
+            link: 'inside/tabs/protocols-content/20',
+          },
+          {
+            name: 'Protocol 22: RESPIRATORY DISTRESS',
+            link: 'inside/tabs/protocols-content/22',
+          },
+          {
+            name: 'Protocol 23: SEIZURES',
+            link: 'inside/tabs/protocols-content/23',
+          },
+        ];
         this.action =
           ' Magnesium is an important cofactor for enzymatic reactions and plays an important role in neurochemical transmission and muscular excitability. Magnesium prevents or controls convulsions by blocking neuromuscular transmission and decreasing the amount of acetylcholine liberated at the end plate by the motor nerve impulse. Magnesium is said to have a depressant effect on the central nervous system, but it does not affect the mother, fetus or neonate when used as directed in eclampsia and pre- eclampsia. Magnesium acts peripherally to produce vasodilation.  ';
         this.indication =
@@ -556,6 +820,20 @@ export class DrugsContentService {
 
       case '24': {
         this.name = 'Morphine  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+          {
+            name: 'Protocol 11: CARDIAC CHEST PAIN (ACUTE CORONARY SYNDROME)',
+            link: 'inside/tabs/protocols-content/11',
+          },
+          {
+            name: 'Protocol 12: CONGESTIVE HEART FAILURE PULMONARY EDEMA',
+            link: 'inside/tabs/protocols-content/12',
+          },
+        ];
         this.action =
           'An opium-derivative, narcotic analgesic, which is a CNS depressant.  Induces sleep and inhibits perception of pain by binding to opiate receptors, decreasing sodium permeability, and inhibiting transmission of pain pulses. Causes peripheral vasodilation, thereby decreasing venous blood return to the heart. Relieves pulmonary congestion and lowers myocardial oxygen need. Metabolized in the liver and excreted in the urine. Onset 2-3 minutes, peak 30 minutes, and duration is 3-6 hours.';
         this.indication =
@@ -571,7 +849,7 @@ export class DrugsContentService {
           '●	Pediatric: 0.1mg/kg IV/IM  (Max 4mg)',
           'Acute Pulmonary Edema: 2-5 mg IV may repeat x 1 to max. dose 10 mg',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -579,6 +857,24 @@ export class DrugsContentService {
 
       case '25': {
         this.name = 'Midazolam ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 06: PAIN & ANXIETY MANAGEMENT',
+            link: 'inside/tabs/protocols-content/6',
+          },
+          {
+            name: 'Protocol 23: SEIZURES',
+            link: 'inside/tabs/protocols-content/23',
+          },
+          {
+            name: 'Protocol 25: TEMPERATURE AND ENVIRONMENTAL EMERGENCIES',
+            link: 'inside/tabs/protocols-content/25',
+          },
+          {
+            name: 'Protocol 30: VIOLENT PATIENT / CHEMICAL SEDATION / TASER BARB REMOVAL',
+            link: 'inside/tabs/protocols-content/30',
+          },
+        ];
         this.action =
           'A short-acting benzodiazepine and CNS depressant 3-4 times as potent as diazepam. Depressant effects are dependent on dose, route of administration, presence of other medications, and age of patient. It can depress the ventilatory response to CO2 stimulation. It diminishes patient recall. Onset of action is 1-5 min with IV dosing, 5-15 min with IM dosing, and 10 min with IN dosing. Duration of action is generally less than 2 hours.';
         this.indication =
@@ -590,29 +886,39 @@ export class DrugsContentService {
         this.effect =
           'Serious cardiac and respiratory events have been associated with the use of IV Midazolam HCl. These include airway obstruction, apnea, hypotension, depressed saturations, respiratory and cardiac arrest. Risk increases with patients over age 55, concomitant use of opioid analgesics, and rapid administration. It should only be given in the setting of continuous respiratory and cardiac monitoring. Other effects can include paradoxical behavior, excitement, coughing, headache, hiccups, nausea, vomiting, and nystagmus (especially in children)  ';
         this.note = ': ½ the dose when combined with Opiods.';
-          this.dose = [
-            '●	Status seizure:',
-            'o	Adult (>5min duration):',
-            '▪	IV - 2.5 - 5 mg slowly (1-2 min) to the desired effect or max dose of 10mg',
-            '▪	IM - 5 - 10 mg',
-            '▪	IN - 10 mg, divide dose between nostrils (use atomizer) ',
-            'o	Pediatric (>5min duration):',
-            '▪	IV – 0.1 mg/kg with max 5 mg',
-            '▪	IM -- 0.2 mg/kg with max 10 mg',
-            '▪	IN -- 0.2 mg/kg, divide dose between nostrils (use atomizer) Max 10mg',
-            '●	Agitation (intubated patient, behavioral emergencies):',
-            'o	2.5 – 5 mg IV or 5 – 10 mg IM ',
-            '●	Cardioversion:',
-            'o	2.5 - 5 mg IV if patient alert',
-          ];
-          this.consideration =null;
-          this.note = null;
-          this.htm = null;
-          break;
+        this.dose = [
+          '●	Status seizure:',
+          'o	Adult (>5min duration):',
+          '▪	IV - 2.5 - 5 mg slowly (1-2 min) to the desired effect or max dose of 10mg',
+          '▪	IM - 5 - 10 mg',
+          '▪	IN - 10 mg, divide dose between nostrils (use atomizer) ',
+          'o	Pediatric (>5min duration):',
+          '▪	IV – 0.1 mg/kg with max 5 mg',
+          '▪	IM -- 0.2 mg/kg with max 10 mg',
+          '▪	IN -- 0.2 mg/kg, divide dose between nostrils (use atomizer) Max 10mg',
+          '●	Agitation (intubated patient, behavioral emergencies):',
+          'o	2.5 – 5 mg IV or 5 – 10 mg IM ',
+          '●	Cardioversion:',
+          'o	2.5 - 5 mg IV if patient alert',
+        ];
+        this.consideration = null;
+        this.note = null;
+        this.htm = null;
+        break;
       }
 
       case '26': {
         this.name = 'Naloxone (Narcan) ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 02: ALTERED MENTAL STATUS',
+            link: 'inside/tabs/protocols-content/2',
+          },
+          {
+            name: 'Protocol 21: OPIOID OVERDOSE',
+            link: 'inside/tabs/protocols-content/21',
+          },
+        ];
         this.action =
           'Overcomes effects of narcotic overdose including respiratory depression, sedation, and hypotension. It does not have any narcotic effect itself. It exhibits essentially no pharmacologic activity. Pure opioid antagonist that competes and displaces opioids at opioid receptor sites';
         this.indication =
@@ -626,7 +932,7 @@ export class DrugsContentService {
           '●	Adult: If suspected narcotic overdose consider 0.4-2 mg Narcan IV. 2 mg IM/IN. For physical findings consistent with narcotics overdose. Max 4 mg. ',
           '●	Pediatric: 0.1 mg/kg IV/IM/IN Max 2mg',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -634,6 +940,16 @@ export class DrugsContentService {
 
       case '27': {
         this.name = 'Nitroglycerin ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 11: CARDIAC CHEST PAIN (ACUTE CORONARY SYNDROME)',
+            link: 'inside/tabs/protocols-content/11',
+          },
+          {
+            name: 'Protocol 12: CONGESTIVE HEART FAILURE PULMONARY EDEMA',
+            link: 'inside/tabs/protocols-content/12',
+          },
+        ];
         this.action =
           'Primary action is relaxation of the vascular smooth muscle and dilatation of peripheral arteries and veins. Although venous effects predominate, nitro produces dilation of both arterial and venous beds. Promotes peripheral pooling of blood and decreases venous return to the heart, reducing left ventricular pressure (preload). Arteriolar relaxation reduces systemic vascular resistance and arterial pressure (afterload). Also increases blood flow through the collateral coronary vessels. ';
         this.indication =
@@ -650,7 +966,7 @@ export class DrugsContentService {
           '●	May repeat same dosage every 5 minutes x 3 if SBP remains 110 or greater if medical control gives authorization. ',
           '●	Treat any hypotension with fluid boluses',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -658,6 +974,44 @@ export class DrugsContentService {
 
       case '28': {
         this.name = 'Norepinephrine (Levophed) ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 08: SHOCK, SEPSIS, & FLUID THERAPY',
+            link: 'inside/tabs/protocols-content/8',
+          },
+          {
+            name: 'Protocol 10: BRADYCARDIA (Symptomatic)',
+            link: 'inside/tabs/protocols-content/10',
+          },
+          {
+            name: 'Protocol 12: CONGESTIVE HEART FAILURE PULMONARY EDEMA',
+            link: 'inside/tabs/protocols-content/12',
+          },
+          {
+            name: 'Protocol 14: POST CARDIAC ARREST (ROSC)',
+            link: 'inside/tabs/protocols-content/14',
+          },
+          {
+            name: 'Protocol 16: ALLERGIC REACTION / ANAPHYLAXIS',
+            link: 'inside/tabs/protocols-content/16',
+          },
+          {
+            name: 'Protocol 17 : DROWNING OR SUBMERSION',
+            link: 'inside/tabs/protocols-content/17',
+          },
+          {
+            name: 'Protocol 21: OPIOID OVERDOSE',
+            link: 'inside/tabs/protocols-content/21',
+          },
+          {
+            name: 'Protocol 34: HEAD INJURY (TRAUMATIC BRAIN INJURY)',
+            link: 'inside/tabs/protocols-content/34',
+          },
+          {
+            name: 'Protocol 37: SNAKE BITES',
+            link: 'inside/tabs/protocols-content/37',
+          },
+        ];
         this.action =
           'Stimulates beta1 and alpha1 receptors in sympathetic nervous system, causing vasoconstriction, increased blood pressure, enhanced contractility, and decreased heart rate';
         this.indication =
@@ -677,12 +1031,18 @@ export class DrugsContentService {
 
         this.note =
           'Overdosage with norepinephrine may result in headache, severe hypertension, reflex bradycardia, marked increase in peripheral resistance, and decreased cardiac output. In case of accidental overdosage, as evidenced by excessive blood pressure elevation, discontinue norepinephrine until the condition of the patient stabilizes. ';
-          this.consideration =null;
-          this.htm = null;
-     break;
+        this.consideration = null;
+        this.htm = null;
+        break;
       }
       case '29': {
         this.name = 'Ondansetron ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 05: NAUSEA / VOMITING',
+            link: 'inside/tabs/protocols-content/5',
+          },
+        ];
         this.action =
           'Selective 5-HT3 receptor antagonist which blocks serotonin, both peripherally on vagal nerve terminals and centrally in the chemo trigger zone';
         this.indication =
@@ -697,7 +1057,7 @@ export class DrugsContentService {
           '●	Adult: 4 mg IV (over 2-5 minutes) OR 4 mg IM injection OR 4 mg ODT. May repeat up to 8 mg with medical control approval in 5-10 minutes.',
           '●	Pediatric: 0.1 mg/kg IV/IM. Max dose 4mg. NOT TO BE USED IN PATIENT’S UNDER 1 YRS OF AGE ',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -705,6 +1065,12 @@ export class DrugsContentService {
 
       case '30': {
         this.name = 'Oral Glucose ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 19: GLUCOSE EMERGENCIES',
+            link: 'inside/tabs/protocols-content/19',
+          },
+        ];
         this.action = 'Increases blood sugar levels ';
         this.indication =
           'Patient meets all of the following criteria:<br>●	Altered mental status - Known history of diabetes mellitus ';
@@ -715,7 +1081,7 @@ export class DrugsContentService {
         this.dose = [
           ' Administer one tube between the patient’s cheek and gums',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -723,6 +1089,12 @@ export class DrugsContentService {
 
       case '31': {
         this.name = 'Oxytocin ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 20: OBSTETRICAL EMERGENCIES',
+            link: 'inside/tabs/protocols-content/20',
+          },
+        ];
         this.action =
           'Stimulates contraction of the smooth muscles in the uterus, thereby constricting uterine blood vessels and controlling excessive bleeding or hemorrhage.  ';
         this.indication = 'Control of postpartum hemorrhage ';
@@ -734,7 +1106,32 @@ export class DrugsContentService {
           ' Oxytocin may be started if bleeding continues:  ',
           '●	IM 10 units followed by IV/IO Infusion by adding 10-40 units to 500ml or 1000mL NS and titrating the infusion to decrease bleeding and patient comfort',
         ];
-        this.consideration =null;
+        this.consideration = null;
+        this.note = null;
+        this.htm = null;
+        break;
+      }
+
+      case '32': {
+        this.name = 'Promethazine';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 05: NAUSEA / VOMITING',
+            link: 'inside/tabs/protocols-content/5',
+          },
+        ];
+        this.action =
+          'Promethazine is an H1 receptor antagonist that blocks the actions of histamine by competitive antagonism at the H1 receptor. Promethazine also acts as an antiemetic and sedative agent with some anticholinergic properties.';
+        this.indication = 'Nausea and vomiting, motion sickness, to potentiate the effects of analgesics, pre/post-op obstetrical sedative, allergic reactions ';
+        this.contradiction =
+          '1. CNS Depression<br>2. Hypsesensitivity to "sulfite" (Not sulfa drugs)<br>3. Children less than 2 years of age';
+        this.effect =
+          '●	Use in children may cause paradoxical hyperexcitability and apnea<br>●	 Sedation<br>●	 Hypotension<br>●	 Confusiong<br>●	Tissue Necrosis (with extravasation)';
+        this.dose = [
+          'Adult:<br> ●	Promethazine (Phenergan) 12.5-25 mg IV titrated to effect if SBP>100 or peripheral pulse present o Dilute with 5-10 mL of NS and administer over 30 seconds<br> ●	Avoid in elderly patients due to potential for sedation<br> ●	Should be given through AC or larger vessel due to extravasation risk or Promethazine 25mg IM, if no vascular access<br> ●	Pediatric dose (2yrs < - <12yrs): Consult Base Physician  ',
+          'Notes: ONLY FOR USE in patients over the age of 2<br>● (IV /IO) Promethazine is highly damaging to tissue with/without extravasation. It is currently recommended that single doses not exceed 25mg, the dose be pushed over 2 minutes, and the dose be diluted with Normal Saline. Dilution may be done in a syringe and/or by running saline wide open through drip set during administration	<br> ●	IM administration may cause local irritation and pain',
+        ];
+        this.precaution = '1. Acutely ill or dehydrated patients<br>2. Age greater than 70 years<br>3. Pregnancy/breast feeding';
         this.note = null;
         this.htm = null;
         break;
@@ -742,6 +1139,24 @@ export class DrugsContentService {
 
       case '33': {
         this.name = 'Sodium Bicarbonate  ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 09: CARDIAC ARREST',
+            link: 'inside/tabs/protocols-content/9',
+          },
+          {
+            name: 'Protocol 21: OPIOID OVERDOSE',
+            link: 'inside/tabs/protocols-content/21',
+          },
+          {
+            name: 'Protocol 33: BURNS – THERMAL / ELECTRICAL / LIGHTNING',
+            link: 'inside/tabs/protocols-content/33',
+          },
+          {
+            name: 'Protocol 35: HEMORRHAGE CONTROL, EXTREMITY AND CRUSH INJURIES',
+            link: 'inside/tabs/protocols-content/35',
+          },
+        ];
         this.action =
           'Neutralizes excess acids, returning blood and body fluid to a more normal pH, in which metabolic processes and medications work more effectively.';
         this.indication =
@@ -771,7 +1186,7 @@ export class DrugsContentService {
           '1.	Not a first line drug-contact OLMC for permission',
           '2.	 Same indications as adult',
         ];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -779,6 +1194,16 @@ export class DrugsContentService {
 
       case '34': {
         this.name = 'Tranexamic Acid/TXA (Cyklokapron) ';
+        this.refrenceProtocol = [
+          {
+            name: 'Protocol 20: OBSTETRICAL EMERGENCIES',
+            link: 'inside/tabs/protocols-content/20',
+          },
+          {
+            name: 'Protocol 35: HEMORRHAGE CONTROL, EXTREMITY AND CRUSH INJURIES',
+            link: 'inside/tabs/protocols-content/35',
+          },
+        ];
         this.action =
           'Tranexamic acid is an anti-fibrinolytic agent that inhibits the conversion of plasminogen to plasmin and at the same time acts as a weak non-competitive inhibitor of plasmin thus arresting fibrinolysis. As a result, a stable clot can be formed, and blood loss is reduced. TXA needs to be given broadly to save the most lives, so clinical judgement based on assessment is crucial. When given within 3 hrs. of injury risk of bleeding death drops by 1/3. Studies have demonstrated improved outcomes when the interval from injury to administration is decreased, therefore early administration is recommended. ';
         this.indication =
@@ -790,7 +1215,7 @@ export class DrugsContentService {
         this.effect =
           ' Hypotension (with rapid IV injection), Seizures in high doses (>2-10 grams), allergic dermatitis, diarrhea, nausea, vomiting, blurred vision. ';
         this.dose = ['Mix 1g/1000 ml of TXA in 100ml NS. Infuse over 10 min'];
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
         this.htm = null;
         break;
@@ -804,9 +1229,10 @@ export class DrugsContentService {
         this.precaution = null;
         this.effect = null;
         this.dose = null;
-        this.consideration =null;
+        this.consideration = null;
         this.note = null;
-        this.htm =null;
+        this.htm = null;
+        this.refrenceProtocol = null;
         break;
       }
     }

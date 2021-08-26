@@ -33,25 +33,29 @@ const routes: Routes = [
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin },
   },
-  {
-    path: 'category-content/:level',
-    loadChildren: () =>
-      import('./subpages/category-content/category-content.module').then(
-        (m) => m.CategoryContentPageModule
-      ),
-  },
-  {
-    path: 'drugs-content/:level',
-    loadChildren: () => import('./subpages/drugs-content/drugs-content.module').then( m => m.DrugsContentPageModule)
-  },
-  {
-    path: 'protocols-content/:level',
-    loadChildren: () => import('./subpages/protocols-content/protocols-content.module').then( m => m.ProtocolsContentPageModule)
-  },
-  {
-    path: 'refrence-content/:level',
-    loadChildren: () => import('./subpages/refrence-content/refrence-content.module').then( m => m.RefrenceContentPageModule)
-  },
+  // {
+  //   path: 'category-info',
+  //   loadChildren: () => import('./subpages/category-info/category-info.module').then( m => m.CategoryInfoPageModule)
+  // },
+  // {
+  //   path: 'category-content/:level',
+  //   loadChildren: () =>
+  //     import('./subpages/category-content/category-content.module').then(
+  //       (m) => m.CategoryContentPageModule
+  //     ),
+  // },
+  // {
+  //   path: 'drugs-content/:level',
+  //   loadChildren: () => import('./subpages/drugs-content/drugs-content.module').then( m => m.DrugsContentPageModule)
+  // },
+  // {
+  //   path: 'protocols-content/:level',
+  //   loadChildren: () => import('./subpages/protocols-content/protocols-content.module').then( m => m.ProtocolsContentPageModule)
+  // },
+  // {
+  //   path: 'refrence-content/:level',
+  //   loadChildren: () => import('./subpages/refrence-content/refrence-content.module').then( m => m.RefrenceContentPageModule)
+  // },
 ];
 @NgModule({
   imports: [

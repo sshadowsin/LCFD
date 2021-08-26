@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CategoryContentPage } from '../subpages/category-content/category-content.page';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -11,7 +11,7 @@ export class Tab2Page {
   // level = 0;
   nextPage = Tab2Page;
 
-  searchTerm: string;
+  searchTerm: string = null;
 
   drugs = [
     { name: 'Acetaminophen (Tylenol)', level: 0 },
@@ -21,16 +21,16 @@ export class Tab2Page {
     { name: 'Aspirin (Ecotrin)', level: 4 },
     { name: 'Atropine', level: 5 },
     { name: 'Calcium Chloride/ Calcium Gluconate', level: 6 },
-    { name: 'Diazepam (Valium)', level: 7 },
+    // { name: 'Diazepam (Valium)', level: 7 },
     { name: 'Diphenhydramine (Benadryl)', level: 8 },
     { name: 'Dextrose', level: 9 },
     { name: 'Epinephrine (Adrenaline)', level: 10 },
-    { name: 'Epi Drip', level: 11 },
+    // { name: 'Epi Drip', level: 11 },
     { name: 'Epinephrine“Push Dose” Pressor Administration', level: 12 },
     { name: 'Fentanyl', level: 13 },
     { name: 'Glucagon (GlucaGen)', level: 14 },
     { name: 'Haloperidol (Haldol)', level: 15 },
-    { name: 'Hydroxocobalamin', level: 16 },
+    // { name: 'Hydroxocobalamin', level: 16 },
     { name: 'Ibuprofen (Motrin/Advil)', level: 17 },
     { name: 'Ipratropium (Atrovent)', level: 18 },
     { name: 'Ketamine HCL', level: 19 },
@@ -51,7 +51,17 @@ export class Tab2Page {
     { name: 'Tranexamic Acid/TXA (Cyklokapron)', level: 34 },
   ];
 
-  constructor(private navCtrl: NavController) {}
+  constructor(
+    private navCtrl: NavController,
+    private platform: Platform
+    ) {
+      this.platform.backButton.subscribe(
+        () => {
+          this.searchTerm = null;
+          this.navCtrl.navigateBack('inside/tabs/tab1');
+        }
+      );
+  }
 
   public openItem(routurl: string): void {
     this.navCtrl.navigateForward(routurl);

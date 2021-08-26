@@ -1,6 +1,15 @@
-<ion-content>
+<ion-content *ngIf="!noFaio">
 <h1 class="text-center mt-5 text-success">Biometric Authentication</h1>
 <ion-img src="../../assets/fingerprint.png" class="img-fluid mx-auto my-5 w-50"></ion-img>
 <ion-button class="w-50 mx-auto" (click)="fingerprint()" size="full" color="success" *ngIf="err">Retry<ion-icon name="arrow-undo-circle-outline"></ion-icon></ion-button>
 <!-- <h1 class="text-danger">{{err}}</h1> -->
+
+<!-- <div *ngIf="noFaio">
+  <h2 class="text-center text-danger">
+    Biometric Authentication is not available on your device.
+  </h2>
+  <ion-button class="w-50 mx-auto" (click)="withoutFaio()" size="full" color="success">Continue<ion-icon name="arrow-forward-circle"></ion-icon></ion-button>
+
+</div> -->
+
 </ion-content>

@@ -40,6 +40,7 @@
   font-weight: bolder;
   background-color: rgb(255, 252, 85);
   border: 1px solid greenyellow;
+  padding: 0;
 }
 
 .f-1 {
@@ -67,4 +68,37 @@
   border: 1px solid gainsboro;
   padding: 0 5%;
   margin: 5% auto;
+}
+
+.ion-ios-telephone, .button-energized{
+  background-color: rgb(236, 206, 31);
+  color: white;
+  font-size: 1.25rem;
+  padding: 2.5%;
+  display: block;
+  text-align: center;
+  margin: 2.5%;
+}
+
+.ion-ios-telephone-purple{
+  background-color: rgb(212, 31, 236);
+  color: white;
+  font-size: 1.25rem;
+  padding: 2.5%;
+  display: block;
+  text-align: center;
+  margin: 2.5%;
+}
+
+
+.text-underline{
+  text-decoration: underline;
+}
+
+.mist-tel{
+  border: 1px solid gainsboro;
+  display: block;
+}
+.no-underline:hover{
+  text-decoration: none;
 }

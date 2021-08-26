@@ -21,6 +21,7 @@ export class CategoryContentPage implements OnInit {
   protocolLevel: number;
   introduction: boolean;
 
+
   constructor(
     private route: ActivatedRoute,
     private content: CategoryItemService,
@@ -53,6 +54,14 @@ export class CategoryContentPage implements OnInit {
 
   openProtocol(routurl,i) {
     this.navCtrl.navigateForward(routurl + (this.protocolLevel + i));
+  }
+
+  openInfo(infoUrl){
+    this.navCtrl.navigateForward(infoUrl);
+  }
+
+  sublink(url){
+    this.navCtrl.navigateForward(url);
   }
 
   ngOnInit() {

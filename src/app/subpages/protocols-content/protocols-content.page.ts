@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Platform } from '@ionic/angular';
-import { CategoryItemService } from 'src/app/services/category-item.service';
-import { ProtocolsContentService } from 'src/app/services/protocols-content.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NavController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-protocols-content',
@@ -11,49 +9,36 @@ import { ProtocolsContentService } from 'src/app/services/protocols-content.serv
 })
 export class ProtocolsContentPage implements OnInit {
   level = null;
-  searchTerm: string;
-
+  searchTerm: string = null;
+  caseSensitive = false;
   name: string;
-
-  providerPoints: any[];
-  providerMainPoints: any[];
-
-  emtMainPoints: any[];
-
-  aemtMainPoints: any[];
-  aemtPinkPoint: string;
-  aemtPinkPointSub: string[];
-
-  paramedicMainPoints: any[];
-
-  keyPoints: string[];
-
-  contact: any[];
-
-  images: string[];
+  currentUrl: string;
 
   constructor(
     private route: ActivatedRoute,
     private platform: Platform,
-    private content: ProtocolsContentService
+    private navCtrl: NavController,
+    private router: Router
   ) {
     this.level = this.route.snapshot.paramMap.get('level');
-    this.content.getContent(this.level);
+    this.currentUrl = this.router.url;
+    this.platform.backButton.subscribe(
+      () => {
+        this.searchTerm = null;
+        this.navCtrl.navigateBack('inside/tabs/tab3');
+      }
+    );
+  }
+
+  sublink(url){
+    this.navCtrl.navigateForward(url);
+  }
+
+  clearTerm(){
+    this.searchTerm = null;
   }
 
   ngOnInit() {
-    this.name = this.content.name;
-    this.providerPoints = this.content.providerPoints;
-    this.providerMainPoints = this.content.providerMainPoints;
-    this.emtMainPoints = this.content.emtMainPoints;
-    this.aemtMainPoints = this.content.aemtMainPoints;
-    this.aemtPinkPoint = this.content.aemtPinkPoint;
-    this.aemtPinkPointSub = this.content.aemtPinkPointSub;
-    this.paramedicMainPoints = this.content.paramedicMainPoints;
-    this.keyPoints = this.content.keyPoints;
-
-    this.contact = this.content.contact;
-
-    this.images = this.content.images;
   }
+
 }

@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
 
   <ion-item lines="none" class="mt-2">
-    <ion-searchbar showCancelButton="focus" mode="ios" placeholder="Search" animated [(ngModel)]="searchTerm2">
+    <ion-searchbar showCancelButton="always" mode="ios" placeholder="Search" animated [(ngModel)]="searchTerm2">
     </ion-searchbar>
   </ion-item>
 
@@ -23,12 +23,12 @@
 
 
   <ion-list *ngFor="let protocol of protocols | filter:searchTerm2; let i = index;">
-    <h1 class="text-center f-1 mx-1" *ngIf=" i===0">Introduction</h1>
-    <h1 class="text-center f-1 mx-1" *ngIf=" i===1">General Patient Care Guidelines</h1>
-    <h1 class="text-center f-1 mx-1" *ngIf=" i===9">CARDIAC PATIENT CARE GUIDELINES</h1>
-    <h1 class="text-center f-1 mx-1" *ngIf=" i===16">MEDICAL PATIENT CARE GUIDELINES</h1>
-    <h1 class="text-center f-1 mx-1" *ngIf=" i===31">TRAUMA PATIENT CARE GUIDELINES</h1>
-    <ion-item (click)="openProtocol('protocols-content/'+i)" lines="none" class="proto-div">
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===0 && !searchTerm2">Introduction</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===1 && !searchTerm2">General Patient Care Guidelines</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===9 && !searchTerm2">CARDIAC PATIENT CARE GUIDELINES</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===16 && !searchTerm2">MEDICAL PATIENT CARE GUIDELINES</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===31 && !searchTerm2">TRAUMA PATIENT CARE GUIDELINES</h1>
+    <ion-item (click)="openProtocol('inside/tabs/protocols-content/'+i)" lines="none" class="proto-div">
       <ion-label>{{protocol.name}}</ion-label>
       <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
     </ion-item>

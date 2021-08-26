@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button>
+      <ion-back-button  defaultHref = "inside/tabs/tab2">
       </ion-back-button>
     </ion-buttons>
 
@@ -12,7 +12,7 @@
 <ion-content>
 
   <ion-item lines="none" class="m-2">
-    <ion-searchbar placeholder="Search Keyword" [(ngModel)]="searchTerm" animated=true mode="ios"></ion-searchbar>
+    <ion-searchbar placeholder="Search Keyword" showCancelButton="always" [(ngModel)]="searchTerm" animated=true mode="ios"></ion-searchbar>
   </ion-item>
 
 
@@ -20,7 +20,14 @@
 
     <h1 class="text-center f-1">{{name}}</h1>
 
-    <div class="box">
+    <h4 class="text-center">
+      Refrence Protocols:<br>
+      <ng-container *ngFor="let protocol of refrenceProtocol">
+        <span [innerHtml]="protocol.name |titlecase" class="text-danger text-underline f-2" (click)="openRefrence(protocol.link)"></span><br>
+      </ng-container>
+    </h4>
+
+    <div class="box" *ngIf="action">
       <h3>Action/Mechanism:</h3>
       <p [innerHtml]="action | highlight:searchTerm"></p>
     </div>
@@ -41,10 +48,10 @@
         <h3 class="f-2">Adverse Effects: </h3>
         <p [innerHtml]="effect | highlight:searchTerm"></p>
       </div>
-      <div>
+      <div *ngIf="consideration">
         <h3 class="f-2">Considerations:</h3>
         <div *ngFor="let consideration of consideration">
-          <p [innerHtml]="consideration"></p>
+          <p [innerHtml]="consideration | highlight:searchTerm"></p>
         </div>
       </div>
     </div>
@@ -57,7 +64,7 @@
       </div>
     </div>
 
-    <div class="box">
+    <div class="box" *ngIf="htm">
       <h3>How to make:</h3>
       <div *ngFor="let recipe of htm">
         <p [innerHtml]="recipe"></p>

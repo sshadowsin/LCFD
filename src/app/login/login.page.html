@@ -1,33 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="text-primary">
+  <ion-toolbar color="primary">
+    <ion-title>
       LOGIN
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-row>
+  <ion-row class="mt-4">
     <ion-col>
       <ion-avatar class="div-center my-5">
-        <img src="../../assets/avatar.png" class="img-fluid">
+        <img src="../../assets/login.jpeg" class="img-fluid">
       </ion-avatar>
     </ion-col>
   </ion-row>
   <ion-row class="ion-align-items-center">
     <ion-col>
-      <form class="border border-2" (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <ion-item class="">
+      <form class="" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <ion-item class="border border-2 mx-2 my-4" lines="none">
           <ion-label position="fixed">Username</ion-label>
           <ion-input type="email" ngModel name="email" required></ion-input>
         </ion-item>
 
-        <ion-item>
+        <ion-item class="border border-2 mx-2 my-2" lines="none">
           <ion-label position="fixed">Password</ion-label>
           <ion-input type="password" ngModel name="password" required></ion-input>
         </ion-item>
 
-        <ion-button expand="block" type="submit">Login</ion-button>
+        <ion-button expand="block" type="submit" class="m-5">Login</ion-button>
       </form>
     </ion-col>
   </ion-row>

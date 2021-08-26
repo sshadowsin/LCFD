@@ -12,9 +12,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./fingerprint.page.scss'],
 })
 export class FingerprintPage implements OnInit, OnDestroy, AfterViewInit {
-  err = '';
+  err = null;
   counter = 0;
   backButtonSubscription;
+  noFaio = null;
 
   constructor(
     private navCtrl: NavController,
@@ -32,34 +33,49 @@ export class FingerprintPage implements OnInit, OnDestroy, AfterViewInit {
   fingerprint() {
     // this.navCtrl.navigateForward('inside');
 
-    this.faio
-      .show({
-        title: 'Biometric Authentication', // (Android Only) | optional | Default: "<APP_NAME> Biometric Sign On"
-        // subtitle: 'Coolest Plugin ever', // (Android Only) | optional | Default: null
-        description: 'Please authenticate', // optional | Default: null
-        fallbackButtonTitle: 'Use Backup', // optional | When disableBackup is false defaults to "Use Pin".
-        // When disableBackup is true defaults to "Cancel"
-        disableBackup: false, // optional | default: false
-        // clientId: '',
-        // clientSecret: 'password',
-        // localizedFallBackTitle: 'Use Pin',
-        // localizedReason: 'Please Authenticate'
-      })
-      .then(() => {
-        this.navCtrl.navigateRoot('inside');
-        // this.navCtrl.navigateForward('inside');
-      })
-      .catch((error: any) => {
-        console.log(error);
-        this.err = error;
-        this.counter += this.counter;
+    this.faio.isAvailable().then(
+      (result: any) => {
+        console.log(result);
+        this.faio.show({
+          title: 'Biometric Authentication', // (Android Only) | optional | Default: "<APP_NAME> Biometric Sign On"
+          // subtitle: 'Coolest Plugin ever', // (Android Only) | optional | Default: null
+          description: 'Please authenticate', // optional | Default: null
+          fallbackButtonTitle: 'Use Backup', // optional | When disableBackup is false defaults to "Use Pin".
+          // When disableBackup is true defaults to "Cancel"
+          disableBackup: false, // optional | default: false
+          // clientId: '',
+          // clientSecret: 'password',
+          // localizedFallBackTitle: 'Use Pin',
+          // localizedReason: 'Please Authenticate'
+        })
+        .then(() => {
+          this.navCtrl.navigateRoot('inside');
+          // this.navCtrl.navigateForward('inside');
+        })
+        .catch((error: any) => {
+          console.log(error);
+          this.err = error;
+          this.counter += this.counter;
 
-        if (this.counter === 3) {
-          this.counter = 0;
-          // eslint-disable-next-line @typescript-eslint/dot-notation
-          navigator['app'].exitApp();
-        }
-      });
+          if (this.counter === 3) {
+            this.counter = 0;
+            // eslint-disable-next-line @typescript-eslint/dot-notation
+            navigator['app'].exitApp();
+          }
+        });
+
+      }
+    ).catch(
+      (error: any) => {
+        this.navCtrl.navigateRoot('inside');
+        console.log(error);
+        this.noFaio = error;
+      }
+    );
+  }
+
+  withoutFaio(){
+    this.navCtrl.navigateRoot('inside');
   }
 
   ngAfterViewInit() {

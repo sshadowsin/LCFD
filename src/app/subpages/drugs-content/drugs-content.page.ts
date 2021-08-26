@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NavController, Platform } from '@ionic/angular';
 import { DrugsContentService } from 'src/app/services/drugs-content.service';
 
 @Component({
@@ -22,15 +23,28 @@ export class DrugsContentPage implements OnInit {
   consideration: string[];
   note: string;
   htm: string[];
+  refrenceProtocol: any[];
 
 
   constructor(
     private route: ActivatedRoute,
-    private content: DrugsContentService
+    private content: DrugsContentService,
+    private navCtrl: NavController,
+    private platform: Platform
   ) {
     this.level = this.route.snapshot.paramMap.get('level');
     this.content.getContent(this.level);
     console.log('level : ' +  this.level);
+    this.platform.backButton.subscribe(
+      () => {
+        this.searchTerm = null;
+        this.navCtrl.navigateBack('inside/tabs/tab2');
+      }
+    );
+  }
+
+  openRefrence(url){
+    this.navCtrl.navigateForward(url);
   }
 
   ngOnInit() {
@@ -46,6 +60,7 @@ export class DrugsContentPage implements OnInit {
     this.consideration = this.content.consideration;
     this.note = this.content.note;
     this.htm = this.content.htm;
+    this.refrenceProtocol = this.content.refrenceProtocol;
     console.log(this.name);
   }
 }

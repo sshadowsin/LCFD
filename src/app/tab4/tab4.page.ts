@@ -13,6 +13,10 @@ export class Tab4Page implements OnInit {
     private navCtrl: NavController
   ) {}
 
+  openUrl(url){
+    this.navCtrl.navigateForward(url);
+  }
+
   signOut() {
     this.authService.signOut();
     this.navCtrl.navigateRoot('signin');

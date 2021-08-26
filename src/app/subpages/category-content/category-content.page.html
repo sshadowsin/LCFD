@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button>
+      <ion-back-button defaultHref = "inside/tabs/tab1" >
       </ion-back-button>
     </ion-buttons>
     <ion-label>{{name}}</ion-label>
@@ -121,13 +121,13 @@
             <li>Start an IV with NS</li>
             <li>In a cardiac arrest deliver 1 round of rhythm appropriate ACLS medications</li>
             <li>In a verified hypoglycemic patient give an appropriate dose of
-              <a href="#/Tabs_Controller/protocol_1008">Dextrose D50</a> (D50- D25-D10 ) or
-              <a href="#/Tabs_Controller/Protocol_1012">Glucagon</a> if unable to establish venous access</li>
+              <a  class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/9')">Dextrose D50</a> (D50- D25-D10 ) or
+              <a  class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/14')">Glucagon</a> if unable to establish venous access</li>
             <li>In a patient with nausea/vomiting, or as an adjunct to narcotic administration may give an appropriate dose of
-              <a href="#/Tabs_Controller/Protocol_1025">Zofran</a>
+              <a  class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/35')">Zofran</a>
             </li>
             <li>In a suspected narcotic overdose with a decreased LOC and associated bradypnea/hypoxia may given an appropriate dose of
-              <a href="#/Tabs_Controller/Protocol_1018">Naloxone</a>
+              <a  class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/26')">Naloxone</a>
             </li>
             <li>In an actively seizing patient administer 1 dose of the approved benzodiazepine</li>
             <li>Insert a supraglottic airway</li>
@@ -166,45 +166,28 @@
     </div>
 
   </div>
+
 </ion-content>
 
 
 <ion-content *ngIf="!introduction">
 
-  <ion-item lines="none" class="m-2">
-    <ion-searchbar placeholder="Search Keyword" [(ngModel)]="searchTerm" animated=true mode="ios"></ion-searchbar>
-    <!-- <p>{{count}}</p> -->
+
+  <ion-item lines="full" (click)="openInfo('inside/tabs/category-info/'+ level)">
+    <ion-label>{{name}}</ion-label>
+    <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
   </ion-item>
 
-  <ion-item>
-    <div class="d-block">
-      <h1 class="f-1 text-center">{{name}}</h1>
-      <p [innerHtml]=" discription | highlight: searchTerm" class="text-center mt-3">
-      </p>
-    </div>
+  <ion-item lines="full" (click)="openInfo('inside/tabs/category-info/5')" *ngIf=" level === '4'">
+    <ion-label>Utah Trauma System Advisory Committiee</ion-label>
+    <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
   </ion-item>
 
-  <div *ngIf="subPointsHeading">
-    <div *ngFor="let heading of subPointsHeading; let i = index" class="mx-3">
-      <h6 [innerHtml]="heading | highlight: searchTerm" class="f-2 mb-3"></h6>
-      <div *ngFor="let point of subPoints[i].points">
-        <p [innerHtml]="point | highlight: searchTerm" class="my-1"></p>
-      </div>
-    </div>
-  </div>
-
-  <br>
-
-  <ion-item *ngIf="footerText">
-    <p [innerHtml]="footerText | highlight: searchTerm" class="magenta"></p>
-  </ion-item>
-
-  <br>
 
   <h2 class="text-center" *ngIf="protocols" class="f-1 text-center">Protocols</h2>
   <div *ngFor="let protocol of protocols; let i = index">
     <ion-list class="py-0">
-      <ion-item lines="full" (click)="openProtocol('protocols-content/',i)">
+      <ion-item lines="full" (click)="openProtocol('inside/tabs/protocols-content/',i)">
         <ion-label>{{protocol}}</ion-label>
         <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
       </ion-item>
@@ -212,4 +195,6 @@
   </div>
 
   <div class="mt-5"></div>
+
+
 </ion-content>

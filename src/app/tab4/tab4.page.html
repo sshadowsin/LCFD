@@ -5,7 +5,8 @@
 </ion-header>
 
 <ion-content>
-<ion-row>
+
+  <ion-row>
   <ion-col class="mx-2">
     <h2>About</h2>
     <p>This applications was designed for CCEMS to provide fast access to the CCEMS protocols.</p>
@@ -25,12 +26,83 @@
   <ion-col class="mx-2">
     <h2>Contact</h2>
     <p>If you have any questions about the app, or simply want to provide feedback, please contact Diego at the link below.</p>
-    <ion-item lines="full">
+    <ion-item lines="full" href="mailto: contactdiego@loganfire.com">
       <ion-label> Contact Diego @ Logan Fire</ion-label>
       <ion-icon name="mail" slot="end"></ion-icon>
     </ion-item>
   </ion-col>
 </ion-row>
+
+<ion-row>
+  <ion-col>
+    <div class="mx-3">
+      <h4 id="information-heading732" style="color:#000000;font-weight:600;">Changelog</h4>
+      <div id="information-markdown1544" class="show-list-numbers-and-dots">
+        <p style="color:#0000FF;">
+          <strong>May 16, 2021</strong>
+        </p>
+
+        <p style="color:#000000;">Updated
+            <a (click)="openUrl('inside/tabs/protocols-content/6')" class="text-danger text-underline">Protocol #6 Pain and Anxiety</a> to correct the PM medications. It now displays doses of Ketamine, not Ketorolac.  </p>
+      </div>
+      <div id="information-markdown1544" class="show-list-numbers-and-dots">
+        <p style="color:#008000;">
+          <strong>April 12, 2021</strong>
+        </p>
+
+        <p style="color:#000000;">Fixed <a class="text-danger text-underline" (click)="openUrl('inside/tabs/drugs-content/20')">Ketorolac (Toradol)</a> Dose to 15-30mg range.  Bug Fixes </p>
+      </div><div id="information-markdown1544" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+        <p style="color:#000000;">
+          <strong>March 11, 2021</strong>
+        </p>
+
+        <p style="color:#000000;">Added <a class="text-danger text-underline" (click)="openUrl('inside/tabs/drugs-content/20')">Ketorolac (Toradol)</a>, <strong><a href="#/Tabs_Controller/Promethazine">Promethazine</a></strong>, <strong><a href="#/Tabs_Controller/Tranexamic">Tranexamic Acid (TXA)</a></strong>, and <strong><a href="#/Tabs_Controller/Ketamine">Ketamine</a></strong>, </p>
+      </div><div id="information-markdown1544" class="show-list-numbers-and-dots">
+        <p style="color:#0000FF;">
+        <p style="color: #000000;">
+          <strong>Feb 10, 2021</strong>
+        </p>
+
+        <p style="color: #000;;">Grammatical Corrections</p>
+      </div><div id="information-markdown1544" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>Nov 16th, 2020</strong>
+        </p>
+
+        <p style="color:#000000;">Updated
+            <a class="text-danger text-underline" (click)="openUrl('inside/tabs/protocols-content/23')">Protocol #23 Seizures</a>
+           to display the correct Ativan Pediatric dose. </p>
+      </div>
+      <div id="information-markdown1543" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>November 4, 2020</strong>
+        </p>
+
+        <p style="color:#000000;">D50 Dose changed to 25gm for Adults. </p>
+
+        <p style="color:#000000;">
+            <a class="text-danger text-underline" (click)="openUrl('inside/tabs/protocols-content/19')">19 Glucose Emergencies</a>
+        </p>
+
+        <p style="color:#000000;">
+            <a class="text-danger text-underline" (click)="openUrl('inside/tabs/drugs-content/9')">Dextrose</a>
+        </p>
+      </div>
+      <div class="spacer" style="width: 748px; height: 21px;"></div>
+      <div id="information-markdown2027" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>October 19th, 2020</strong>
+        </p>
+
+        <p style="color:#000000;">Initial release of new protocols for CCEMS</p>
+      </div>
+
+    </div>
+
+  </ion-col>
+</ion-row>
+
 
 <div class="mx-auto justify-content-center">
   <ion-button (click) ="signOut()" class="m-5" expand="block">Sign Out</ion-button>

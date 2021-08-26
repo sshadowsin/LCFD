@@ -18,6 +18,8 @@ import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { FingerprintPageModule } from './fingerprint/fingerprint.module';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HighlightModule } from './lib/highlight/highlight/highlight.module';
+import { HighlightDirective } from './lib/highlight/highlight.directive';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +34,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AngularFireAuthModule,
     FingerprintPageModule,
     Ng2SearchPipeModule,
+    HighlightModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

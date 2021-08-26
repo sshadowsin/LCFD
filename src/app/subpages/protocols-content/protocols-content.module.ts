@@ -9,6 +9,7 @@ import { ProtocolsContentPageRoutingModule } from './protocols-content-routing.m
 import { HighlightPipe } from 'src/app/models/text-highlight';
 
 import { ProtocolsContentPage } from './protocols-content.page';
+import { HighlightModule } from 'src/app/lib/highlight/highlight/highlight.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { ProtocolsContentPage } from './protocols-content.page';
     FormsModule,
     IonicModule,
     ProtocolsContentPageRoutingModule,
+    HighlightModule
   ],
   declarations: [ProtocolsContentPage, HighlightPipe]
 })
