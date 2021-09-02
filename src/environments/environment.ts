@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: 'AIzaSyCpxTRBJ8KaOlkn91bqvw8Kk85jdJXenbo',
-    authDomain: 'logan-city-hk.firebaseapp.com',
-    projectId: 'logan-city-hk',
-    storageBucket: 'logan-city-hk.appspot.com',
-    messagingSenderId: '348348649656',
-    appId: '1:348348649656:web:3357073e4c73ba0980a44d'
+    apiKey: 'AIzaSyAlpwx_EdxRNXc27ufBBTppZIZSnOk4_7Y',
+    authDomain: 'lcfd-protocols.firebaseapp.com',
+    projectId: 'lcfd-protocols',
+    storageBucket: 'lcfd-protocols.appspot.com',
+    messagingSenderId: '576229609728',
+    appId: '1:576229609728:web:dc1671a0bafd09f12e23e5',
+    measurementId: 'G-8V2G3XHFMR'
   }
 };
 

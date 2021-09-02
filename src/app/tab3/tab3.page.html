@@ -28,7 +28,7 @@
     <h1 class="text-center f-1 mx-1" *ngIf=" i===9 && !searchTerm2">CARDIAC PATIENT CARE GUIDELINES</h1>
     <h1 class="text-center f-1 mx-1" *ngIf=" i===16 && !searchTerm2">MEDICAL PATIENT CARE GUIDELINES</h1>
     <h1 class="text-center f-1 mx-1" *ngIf=" i===31 && !searchTerm2">TRAUMA PATIENT CARE GUIDELINES</h1>
-    <ion-item (click)="openProtocol('inside/tabs/protocols-content/'+i)" lines="none" class="proto-div">
+    <ion-item (click)="openProtocol('inside/tabs/protocols-content/'+ protocol.level)" lines="none" class="proto-div">
       <ion-label>{{protocol.name}}</ion-label>
       <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
     </ion-item>
