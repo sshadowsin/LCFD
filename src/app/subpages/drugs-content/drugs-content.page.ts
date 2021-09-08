@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, Platform } from '@ionic/angular';
 import { DrugsContentService } from 'src/app/services/drugs-content.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-drugs-content',
@@ -30,7 +31,8 @@ export class DrugsContentPage implements OnInit {
     private route: ActivatedRoute,
     private content: DrugsContentService,
     private navCtrl: NavController,
-    private platform: Platform
+    private platform: Platform,
+    private location: Location
   ) {
     this.level = this.route.snapshot.paramMap.get('level');
     this.content.getContent(this.level);
@@ -63,4 +65,10 @@ export class DrugsContentPage implements OnInit {
     this.refrenceProtocol = this.content.refrenceProtocol;
     console.log(this.name);
   }
+
+  backButton(){
+    this.location.back();
+  }
+
+
 }

@@ -1,10 +1,13 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button  defaultHref = "inside/tabs/tab2">
+    <!-- <ion-buttons slot="start">
+      <ion-back-button defaultHref="inside/tabs/tab2">
       </ion-back-button>
-    </ion-buttons>
-
+    </ion-buttons> -->
+    <ion-button slot="start" (click)="backButton()" mode="ios">
+      <ion-icon slot="start" name="arrow-back"></ion-icon>
+      Back
+    </ion-button>
     <ion-title>{{name}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,7 +15,8 @@
 <ion-content>
 
   <ion-item lines="none" class="m-2">
-    <ion-searchbar placeholder="Search Keyword" showCancelButton="always" [(ngModel)]="searchTerm" animated=true mode="ios"></ion-searchbar>
+    <ion-searchbar placeholder="Search Keyword" showCancelButton="always" [(ngModel)]="searchTerm" animated=true
+      mode="ios"></ion-searchbar>
   </ion-item>
 
 
@@ -23,7 +27,8 @@
     <h4 class="text-center">
       Refrence Protocols:<br>
       <ng-container *ngFor="let protocol of refrenceProtocol">
-        <span [innerHtml]="protocol.name |titlecase" class="text-danger text-underline f-2" (click)="openRefrence(protocol.link)"></span><br>
+        <span [innerHtml]="protocol.name |titlecase" class="text-danger text-underline f-2"
+          (click)="openRefrence(protocol.link)"></span><br>
       </ng-container>
     </h4>
 

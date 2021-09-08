@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CategoryItemService } from 'src/app/services/category-item.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-category-info',
@@ -19,6 +20,7 @@ export class CategoryInfoPage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private content: CategoryItemService,
+    private location: Location
 ) {
   this.level = this.route.snapshot.paramMap.get('level');
   this.content.getContent(this.level);
@@ -32,5 +34,10 @@ export class CategoryInfoPage implements OnInit {
     this.footerText = this.content.footerText;
     this.image =  this.content.image;
   }
+
+  backButton(){
+    this.location.back();
+  }
+
 
 }

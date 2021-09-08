@@ -1,18 +1,26 @@
 <ion-header>
   <ion-toolbar color="primary" *ngIf="level !== '5'">
-    <ion-buttons slot="start">
+    <!-- <ion-buttons slot="start">
       <ion-back-button defaultHref = "inside/tabs/category-content/{{level}}" >
       </ion-back-button>
-    </ion-buttons>
-    <ion-label>{{name}}</ion-label>
+    </ion-buttons> -->
+    <ion-button slot="start" (click)="backButton()" mode="ios">
+      <ion-icon slot="start" name="arrow-back"></ion-icon>
+      Back
+    </ion-button>
+    <ion-title>{{name}}</ion-title>
   </ion-toolbar>
 
   <ion-toolbar color="primary" *ngIf="level === '5'">
-    <ion-buttons slot="start">
+    <!-- <ion-buttons slot="start">
       <ion-back-button defaultHref = "inside/tabs/category-content/4" >
       </ion-back-button>
-    </ion-buttons>
-    <ion-label>Utah Trauma System Advisory Committee</ion-label>
+    </ion-buttons> -->
+    <ion-button slot="start" (click)="backButton()" mode="ios">
+      <ion-icon slot="start" name="arrow-back"></ion-icon>
+      Back
+    </ion-button>
+    <ion-title>Utah Trauma System Advisory Committee</ion-title>
   </ion-toolbar>
 
 

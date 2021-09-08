@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, Platform } from '@ionic/angular';
@@ -18,7 +19,8 @@ export class ProtocolsContentPage implements OnInit {
     private route: ActivatedRoute,
     private platform: Platform,
     private navCtrl: NavController,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) {
     this.level = this.route.snapshot.paramMap.get('level');
     this.currentUrl = this.router.url;
@@ -40,5 +42,10 @@ export class ProtocolsContentPage implements OnInit {
 
   ngOnInit() {
   }
+
+  backButton(){
+    this.location.back();
+  }
+
 
 }

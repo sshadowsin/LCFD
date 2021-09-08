@@ -1,5 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RefrenceContentService } from 'src/app/services/refrence-content.service';
 
 @Component({
@@ -17,8 +18,9 @@ export class RefrenceContentPage implements OnInit {
 
  constructor(
     private content: RefrenceContentService,
-    private route: ActivatedRoute
-  ) {
+    private route: ActivatedRoute,
+    private location: Location
+    ) {
     this.level = this.route.snapshot.paramMap.get('level');
     this.content.getContent(this.level);
    }
@@ -28,6 +30,10 @@ export class RefrenceContentPage implements OnInit {
     this.images = this.content.images;
     this.headings = this.content.headings;
     this.contacts = this.content.contacts;
+  }
+
+  backButton(){
+    this.location.back();
   }
 
 }

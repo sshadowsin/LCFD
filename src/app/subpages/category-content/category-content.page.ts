@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NavController, Platform } from '@ionic/angular';
 import { CategoryItemService } from 'src/app/services/category-item.service';
 // import { HighlightPipe } from 'src/app/models/text-highlight';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-category-content',
@@ -25,7 +26,8 @@ export class CategoryContentPage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private content: CategoryItemService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private location: Location
   ) {
     this.level = this.route.snapshot.paramMap.get('level');
     this.content.getContent(this.level);
@@ -73,4 +75,10 @@ export class CategoryContentPage implements OnInit {
     this.protocols = this.content.protocols;
     this.introduction = this.content.introduction;
   }
+
+  backButton(){
+    this.location.back();
+  }
+
+
 }
