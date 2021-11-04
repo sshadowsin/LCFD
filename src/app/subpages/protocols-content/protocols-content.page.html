@@ -992,7 +992,7 @@
                     <li>
                       <p [appHighlight]="searchTerm">
                         Any adult patient who is apneic, pulseless, and has an initial
-                        rhythm of asystole who also:
+                        rhythm of asystole as confirmed by two leads on EKG who also:
                       </p>
                       <ul>
                         <li [appHighlight]="searchTerm">Had an unwitnessed arrest AND an estimated time interval of
@@ -1387,7 +1387,7 @@
           </p>
           <blockquote>
             <p [appHighlight]="searchTerm"></p> • Dilute with 5-10 mL of NS and administer over 30 seconds
-            <p [appHighlight]="searchTerm"></p>• Avoid in elderly patients due to potential for sedation
+            <p [appHighlight]="searchTerm"></p>• Avoid in elderly patients (over 65) due to potential for sedation
             <p [appHighlight]="searchTerm"></p>• Should be given through AC or larger vessel due to extravasation
             <p [appHighlight]="searchTerm"></p>•
             <b>Promethazine</b> 25mg IM, if no vascular access is available
@@ -1551,7 +1551,7 @@
         </div>
         <div id="painAndAnxietyManagement-markdown2541" class="show-list-numbers-and-dots">
           <p style="color:#000000;">
-            <strong>Pain Control</strong>
+            <strong>Pain Control - Choose only one narcotic only</strong>
           </p>
 
           <ul>
@@ -1560,17 +1560,21 @@
                 <a class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/13')">Fentanyl</a>
               </strong>
               <ul>
-                <li [appHighlight]="searchTerm">IV/IM 1-2 mcg/kg slowly. Expected single does: 25-50 mcg every 5-10
-                  minutes. Max total dose of 200
-                  mcg. </li>
+                <li [appHighlight]="searchTerm">IV 1-2 mcg/kg slowly. Expected single does: 25-50 mcg every 5-10
+                  minutes. OR Fentanyl IM 25-50 mcg every 15-20 minutes. 
+                </li>
               </ul>
             </li>
             <li>
+              Max Total Dose of 200mcg
+            </li>
+            <li>
               <strong>
-                <a class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/24')">Morphine</a>
+                <a class="text-danger text-underline" (click)="sublink('inside/tabs/drugs-content/24')">Morphine Sulfate </a>
               </strong>
               <ul>
                 <li [appHighlight]="searchTerm">IV 2-4 mg every 10 minutes titrated to effect. Max 10 mg.</li>
+                <li [appHighlight]="searchTerm">IM 2-4 mg May repeat in 10 minutes. Max 10 mg.</li>
               </ul>
             </li>
             <li>
