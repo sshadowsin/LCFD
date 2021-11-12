@@ -52,11 +52,11 @@ export class DrugsContentService {
       case '1': {
         this.name = 'Adenosine (Adenocard)';
         this.action =
-          'A naturally occurring nucleoside that acts on the AC node to slow conduction and inhibit reentry pathways. Useful in PSVT. Rapidly metabolized—Half-life is <5 seconds';
+          'A naturally occurring nucleotide that acts on the AC node to slow conduction and inhibit reentry pathways. Useful in PSVT. Rapidly metabolized—Half-life is <5 seconds';
         this.indication =
           'To convert acute PSVT to normal sinus rhythm. Diagnostic agent for distinguishing supraventricular from ventricular tachycardia, as well as broad QRS complex tachycardia’s. ';
         this.contradiction =
-          'Patients with hypersensitivity to the drug. Those in second or third degree heart block, sick sinus syndrome, or symptomatic bradycardia. Unstable patient with SVT is treated with synchronized cardioversion. ';
+          'Patients with hypersensitivity to the drug. Those in second or third degree heart block, sick sinus syndrome, or symptomatic bradycardia. Unstable patients with SVT are treated with synchronized cardioversion. ';
         this.precaution =
           'Could produce bronchoconstriction in-patients with asthma. Patients who develop high level heart block after a single dose should not receive additional doses. Use with caution in-patients receiving digoxin and verapamil in combination. Therapeutic levels of theophylline and methylxanthines affect the response of adenosine Dipyridamole potentiates its effect.';
         this.effect =
@@ -88,12 +88,12 @@ export class DrugsContentService {
           'For the relief of bronchospasm in patients two years of age and older with reversible obstructive airway disease and acute attacks of bronchospasm. Not for use in croup.  High-risk preterm labor when delivery is imminent with medical control consulted. ';
         this.contradiction = 'Hypersensitivity to the drug.';
         this.precaution =
-          'Used with caution in patients with cardiovascular disorders, especially coronary insufficiency, cardiac arrhythmias and hypertension. MAO inhibitors, tricyclic antidepressants, may potentiate action on CV system. Propranolol, and other beta blockers inhibit the effect of albuterol.';
+          'Used with caution in patients with cardiovascular disorders, especially coronary insufficiency, cardiac arrhythmias and hypertension. MAO inhibitors, tricyclic antidepressants, may potentiate action on the CV system. Propranolol, and other beta blockers inhibit the effect of albuterol.';
         this.effect =
           'Tachycardia, hypertension, bronchospasm, bronchitis, nasal congestion, tremors, dizziness, nervousness, headache, and sleeplessness. ';
         this.consideration = [
-          '⮚	Hold (suggest change to consult OLMC) if baseline heart rate > 100 and increases more than 20 BPM ( this way OLMC can make the decision to give or not instead of the guys doing nothing).',
-          '⮚	Hold  (would change to consult OLMC)  if systolic blood pressure Systolic BP > 180 or Diastolic BP > 100   ( same thought)',
+          '⮚	Consult OLMC if baseline heart rate > 100 and increases more than 20 BPM ( this way OLMC can make the decision to give or not instead of the guys doing nothing).',
+          '⮚	Consult OLMC if systolic blood pressure Systolic BP > 180 or Diastolic BP > 100   ( same thought)',
           ' ⮚	Monitor vital signs before and after treatment.',
         ];
         this.dose = [
@@ -138,7 +138,7 @@ export class DrugsContentService {
         this.action =
           'Blocks sodium channels at rapid pacing frequencies, causing an increase in the duration of the myocardial cell action potential and refractory period, as well as alpha- and beta-adrenergic blockade. The drug decreases sinus rate increases PR and QT intervals, results in development of U waves, and changes T-wave contour. After IV use, amiodarone relaxes vascular smooth muscle, reduces peripheral vascular resistance (afterload), and increases cardiac index slightly. ';
         this.indication =
-          'Anti-arrhythmics are indicated for shockable rhythms that are unresponsive to defibrillation and are recommended after defibrillation and epinephrine in cardiac arrest with ventricular fibrillation and pulseless ventricular tachycardia. ';
+          'Antiarrhythmics are indicated for shockable rhythms that are unresponsive to defibrillation and are recommended after defibrillation and epinephrine in cardiac arrest with ventricular fibrillation and pulseless ventricular tachycardia. ';
         this.contradiction =
           'Marked sinus bradycardia due to severe sinus node dysfunction, second- or third-degree AV block, syncope caused by bradycardia (except when used with a pacemaker). Cardiogenic shock. Lactation.  ';
         this.precaution =
@@ -315,7 +315,7 @@ export class DrugsContentService {
         this.effect =
           'Pulmonary edema, exacerbated hypertension, heart failure, Hyperglycemia, (during infusion), hyperosmolar syndrome (mental confusion, loss of consciousness), hypokalemia, reactive hypoglycemia (after infusion). ';
         this.dose = [
-          '●	Adult: One prefilled syringe of D50W- 25mL (12.5 gm) IV—may repeat as appropriate  ',
+          '●	Adult: One prefilled syringe of D50W- 50mL (25 gm) IV—may repeat as appropriate  ',
           '●	Pediatric: ',
           'o	D10W 5 ml/kg (0.5 gm/kg) IV- Max 12.5 gm (125 ml) [Preferred for everyone] ',
           'o	D25W 2ml/kg (0.5 gm/kg) IV (only for >1year old) Max 12.5gm(50mL)',
@@ -323,7 +323,6 @@ export class DrugsContentService {
         this.consideration = null;
         this.htm = null;
         this.note =
-          'Vesicant (at concentrations ≥10%); ensure proper needle or catheter placement prior to and during IV infusion. Avoid extravasation. If extravasation occurs, stop infusion immediately and disconnect. Remove needle/cannula; apply dry cold compresses; elevate extremity.';
         break;
       }
 
@@ -370,7 +369,7 @@ export class DrugsContentService {
           '●	Pediatric: Cardiac arrest- Epinephrine 0.01 mg/kg (0.1 ml/kg of 0.1mg/mL; 1:10,000) push (Max dose= 1 mg or 10 mL) every 3-5 min as long as the patient remains pulseless. Unless a clear response to epinephrine is observed, consider a limit of 3 total doses.',
           'o	For WHEEZING: Epinephrine IM 0.01 mg/kg every 20 minutes as needed for Acute severe asthma unresponsive to inhaled beta-agonist  ',
           'o	For STRIDOR: Epinephrine 2mg (2mL of 1 mg/mL; 1:1000) added to 3mL of Normal Saline via nebulizer.',
-          'o	 For Anaphylaxis: 0.01 mg/kg (0.01 mL/kg of 1 mg/mL; 1:1000) IM up to 0.3 mg if patient was exposed to commonly recognized allergen and has respiratory distress or hypotension.',
+          'o	 For Anaphylaxis: 0.01 mg/kg (0.01 mL/kg of 1 mg/mL; 1:1000) IM up to 0.3 mg if the patient was exposed to a commonly recognized allergen and has respiratory distress or hypotension.',
         ];
         this.consideration = null;
         this.note = null;
@@ -428,16 +427,14 @@ export class DrugsContentService {
         this.effect =
           'Nervousness, tremor, headache, agitation, dizziness, weakness, cerebral hemorrhage, palpitations, hypertension, tachycardia, anginal pain, nausea and vomiting, and dyspnea.  ';
         this.dose = [
-          '●	Adult: 0.5-2 mL’s (5-20mcg) every 2-5 minutes to maintain blood pressure. ',
-          '●	Pediatric: 1 mcg/kg (0.1mL/kg) IV every 2-5 minutes to maintain blood pressure ',
-          'o	D10W 5 ml/kg (0.5 gm/kg) IV- Max 12.5 gm (125 ml) [Preferred for everyone] ',
-          'o	D25W 2ml/kg (0.5 gm/kg) IV (only for >1year old) Max 12.5gm(50mL)',
+          '●	Adult: 10 mcg( 0.1mg/ml of 1:10,000) IV/IO as needed to maintain a SBP &gt;100 mmHg after a fluid bolus of 500 ml, may give every 3-5 minutes.',
+          '●	Pediatric: IV Push Dose Epinephrine: 1 mcg/kg (1:10,000 Epi) as needed to maintain a SBP &gt;70 mmHg + age in yrs. x 2, after a fluid bolus of 20 ml/kg, may give every 3-5 minutes. ** NOTE-Requires OLMC consultation prior to administration. ',
         ];
         this.htm = [
           '●	Recipe 1 =10mL',
           'o	Take a 10 ml syringe with 9 ml of normal saline',
           'o	Into this syringe, draw up 1 ml of epinephrine from the cardiac amp (Cardiac amp contains Epinephrine 100 mcg/ml)',
-          'o	Now you have 10 ml’s of Epinephrine 10 mcg/ml ',
+          'o	Now you have 10 ml of Epinephrine 10 mcg/ml ',
           '●	Recipe 2 =50mL',
           'o	Take a 50 ml syringe with 45 ml of normal saline',
           'o	Into this syringe, draw up 5 ml of epinephrine from the cardiac amp (Cardiac amp contains Epinephrine 100 mcg/ml) ',
@@ -474,7 +471,7 @@ export class DrugsContentService {
           'Continuously monitor vitals, oximetry, and mental status before and after administration. Fentanyl should be administered SLOWLY (over 2 minutes). High doses may cause chest wall and jaw muscular rigidity with resultant difficult ventilation. Respiratory depression may outlast pain control effects. Caution with the elderly pts and smaller framed pts, begin   with a lower dose.';
         this.effect =
           'Sedation/decreased level of consciousness, respiratory depression/arrest, bradycardia, hypotension or hypertension, mild nausea and/or vomiting, increased intracranial pressure. Rule out significant trauma prior to administration.  ';
-        this.note = '½ the dose when combined with Benzos/Opiod cocktail.';
+        this.note = '½ the dose when combined with Benzos/Opioid cocktail.';
         this.dose = [
           '●	Adult: 1-2 mcg/kg slowly IV/IM. Expected single dose: 25-50 mcg every 5-10 minutes.  Max Total Dose: 200 mcg  ',
           '●	Pediatric: 0.5-1 mcg/km slowly IV/IM. Max Dose: 50 mcg. ',
@@ -502,7 +499,7 @@ export class DrugsContentService {
         this.precaution =
           'Give with caution to patients that have low levels of releasable glucose (e.g., adrenal insufficiency, chronic hypoglycemia, and prolonged fasting). Potentiates oral anticoagulants. Depletes glycogen stores especially in children and adolescents.';
         this.effect =
-          'Hyperglycemia (excessive dosage), nausea and vomiting hypersensitivity reactions (anaphylaxis, dyspnea, hypotension, rash), increased blood pressure, and pulse; this maybe greater in patients taking beta-blockers. ';
+          'Hyperglycemia (excessive dosage), nausea and vomiting, hypersensitivity reactions (anaphylaxis, dyspnea, hypotension, rash), increased blood pressure, and pulse; this maybe greater in patients taking beta-blockers. ';
         this.dose = [
           '●	Adult: Give 1 mg. IM, after reconstituting powder and sterile water, for symptomatic diabetic patient whose IV access has been difficult.  ',
           '●	Pediatric: 0.01-0.02 mg/kg (max dose of 1 mg) IM if no IV/IO access after reconstituting powder and sterile water, for symptomatic diabetic patient whose IV access has been difficult.',
@@ -618,7 +615,7 @@ export class DrugsContentService {
         this.precaution =
           'Caution should be used in the hypertensive patient and in the patient with existing tachyarrhythmia';
         this.effect =
-          'Laryngospasm: this very rare adverse reaction presents with stridor and respiratory distress.<br>●	After every administration of ketamine:<br>o	Prepare to provide respiratory support including bag-valve-mask ventilation and suction which are generally sufficient in rare cases of laryngospasm.<br>o	Institute cardiac monitoring, pulse oximetry and continuous waveform capnography<br>o	Establish IV or IO access, check blood glucose<br>o	Establish and maintain physical restraint.<br>●	Emergence reaction: presents as anxiety, agitation, apparent hallucinations or nightmares as ketamine is wearing off. For severe reactions, consider benzodiazepine.<br>●	Nausea and Vomiting: always have suction available after ketamine administration. Give antiemetic as needed.<br>●	Hypersalivation: Suction usually sufficient. If profound hypersalivation causing airway difficulty, consult Medical Control for Atropine 0.5mg/IV. ';
+          'Laryngospasm: this very rare adverse reaction presents with stridor and respiratory distress.<br>●	After every administration of ketamine:<br>o	Prepare to provide respiratory support including bag-valve-mask ventilation and suction which are generally sufficient in rare cases of laryngospasm.<br>o	Institute cardiac monitoring, pulse oximetry and continuous waveform capnography<br>o	Establish IV or IO access, check blood glucose<br>o	Establish and maintain physical restraint.<br>●	Emergence reaction: presents as anxiety, agitation, apparent hallucinations or nightmares as ketamine is wearing off. For severe reactions, consider benzodiazepine.<br>●	Nausea and Vomiting: always have suction available after ketamine administration. Give antiemetic as needed.<br>●	Hypersalivation: Suction usually sufficient. If profound hypersalivation causes airway difficulty, consult Medical Control for Atropine 0.5mg/IV. ';
         this.dose = [
           '●	Adult:  ',
           'o	Violent patient: ',
@@ -659,8 +656,8 @@ export class DrugsContentService {
         this.precaution = ' Separate use from other NSAIDs by 6 hours.';
         this.effect = 'Dyspepsia  ';
         this.dose = [
-          '●	Adult: 18-60 year old 30 mg IV/IO Single dose.  ',
-          '●	Adult: >60 year old 15mg IV/IO Single dose. ',
+          '●	Adult: 18-60 year old 15-30 mg IV/IO Single dose.  ',
+          '●	Adult: >65 year old 15mg IV/IO Single dose. ',
           '●  Pediatric: 0.5mg/kg IV (max 15mg), single dose only, ONLY FOR USE in patients over the age of 2.',
         ];
         this.consideration = null;
@@ -755,7 +752,7 @@ export class DrugsContentService {
           ' Lorazepam may precipitate CNS depression and psychomotor impairment when the patient is taking CNS depressant medications. Should not be administered with other drugs because of possible precipitation (incompatible with most fluids; should be administered into an IV of normal saline solution).';
         this.effect =
           ' Hypotension, Reflex tachycardia, Respiratory depression, Ataxia, Psychomotor impairment, Confusion, Nausea/Vomiting ';
-        this.note = ' ½ the dose when combined with Opiods.';
+        this.note = ' ½ the dose when combined with Opioids.';
         this.dose = [
           'Adult: Seizures: 2 mg slow IV (<2 mg/min) or IM.  ',
           'Agitation/Anxiety Relief: 1 mg slow IV/IO (<2 mg/min) or IM – repeat in five minutes, max dose of 2 mg',
@@ -763,7 +760,7 @@ export class DrugsContentService {
           'Pediatrics: Seizures: 0.05 mg / kg (max 2 mg per dose) slow IV/IO (<2 mg/min) or IM',
         ];
         this.consideration = [
-          '●	Pregnancy safety: Category D - dangerous to fetus0consult OLMC',
+          '●	Pregnancy safety: Category D - dangerous to fetus consult OLMC',
           '●	Must be diluted 1:1 with normal saline prior to IV administration, and given not more than 2mg/minute, Reduce dose by 50% in elderly patients',
           '●	Resuscitation equipment should be readily available, monitor respirations carefully! ',
         ];
@@ -793,12 +790,12 @@ export class DrugsContentService {
         this.indication =
           'Parenteral anticonvulsant for the prevention and control of seizures in severe toxemia of pregnancy.<br>●	Torsade’s de pointes<br>●	Refractory ventricular fibrillation<br>●	Asthma Refractory to other treatment';
         this.contradiction =
-          '•	Do not give a patient with heart block or recent MI, shock, persistent Severe Hypertension, Patients undergoing routine dialysis';
+          '•	Do not give a patient with a 2nd or 3rd degree heart block or recent MI, shock, persistent Severe Hypertension, Patients undergoing routine dialysis';
         this.effect =
           ' Signs of hypermagnesemia include: flushing, sweating, hypotension, depression of reflexes, flaccid paralysis, hypothermia, circulatory collapse, depression of cardiac function and central nervous system depression. These symptoms can precede fatal paralysis.  ';
         this.dose = [
           '●	Eclamptic seizures: 4 gm IV (mixed in 50/100 ml of D5W/NS and administered over 4 minutes). May repeat once at 2 gm IV (mixed in 50/100 ml of D5W/NS and administered over 5 minutes)   ',
-          '●	Torsade’s de pointes and refractory VF: 1-2 gm IV (mixed in 50/100 ml of D5W/NS and administered over 1-2 minutes) followed by a maintenance infusion (1 gm in 250 ml of D5W/NS administered at 30-60 gtt/min)',
+          '●	Torsades de pointes and refractory VF: 1-2 gm IV (mixed in 50/100 ml of D5W/NS and administered over 1-2 minutes) followed by a maintenance infusion (1 gm in 250 ml of D5W/NS administered at 30-60 gtt/min)',
           '●	Asthma  ',
           'o	Adult: 2 grams in 50/100 ml of D5W/NS over 20 min',
           'o	Pediatric: 50 mg/kg (Max dose = 2 gm) in 50/100 ml of D5W/NS over 20 min',
@@ -841,9 +838,9 @@ export class DrugsContentService {
         this.contradiction =
           'Hypersensitivity or allergy to opiates, acute bronchial asthma, heart failure secondary to lung disease, upper airway obstruction, acute alcoholism, convulsive states, and paralytic ileus.';
         this.precaution =
-          'Causes hypotension in volume-depleted patients. Administer slowly and titrate to effect. May cause apnea in asthmatic patients. May also cause increase ventricular response rate in presence of supraventricular tachycardias. Use with caution in the elderly, head injuries with increased intracranial pressure, COPD, severe hepatic or renal disease.';
+          'Causes hypotension in volume-depleted patients. Administer slowly and titrate to effect. May cause apnea in asthmatic patients. May also cause an increased ventricular response rate in presence of supraventricular tachycardias. Use with caution in the elderly, head injuries with increased intracranial pressure, COPD, severe hepatic or renal disease.';
         this.effect =
-          'Seizures (with large doses), hypotension, bradycardia, cardiac arrest, or may see tachycardia, and hypertension. Nausea and vomiting, rash, itching, urine retention, respiratory depression and arrest, hypothermia, and increased intracranial pressure may also been seen.  ';
+          'Seizures (with large doses), hypotension, bradycardia, cardiac arrest, or may see tachycardia, and hypertension. Nausea and vomiting, rash, itching, urine retention, respiratory depression and arrest, hypothermia, and increased intracranial pressure may also be seen.  ';
         this.dose = [
           '●	Adult: For persistent pain, 2-4 mg IV titrated to obtain pain relief (use caution in presence of COPD) maximum of 10 mg  ',
           '●	Pediatric: 0.1mg/kg IV/IM  (Max 4mg)',
@@ -882,10 +879,10 @@ export class DrugsContentService {
         this.contradiction =
           '●	Hypersensitivity/allergy to midazolam or any benzodiazepine';
         this.precaution =
-          'Use cautiously in patients with uncompensated acute illness and in elderly or debilitated patients. Administer slowly over at least 2 minutes. Use with caution in neonates. Versed does not protect against the intracranial pressure or against the pulse and blood pressure rise associated with intubation. Erythromycin may alter the metabolism of Versed. Oral contraceptives prolong the half-life. Sedatives effects may be antagonized by theophylline';
+          'Use cautiously in patients with uncompensated acute illness and in elderly or debilitated patients. Administer slowly over at least 2 minutes. Use with caution in neonates. Versed does not protect against the intracranial pressure or against the pulse and blood pressure rise associated with intubation. Erythromycin may alter the metabolism of Versed. Oral contraceptives prolong the half-life. Sedative effects may be antagonized by theophylline';
         this.effect =
           'Serious cardiac and respiratory events have been associated with the use of IV Midazolam HCl. These include airway obstruction, apnea, hypotension, depressed saturations, respiratory and cardiac arrest. Risk increases with patients over age 55, concomitant use of opioid analgesics, and rapid administration. It should only be given in the setting of continuous respiratory and cardiac monitoring. Other effects can include paradoxical behavior, excitement, coughing, headache, hiccups, nausea, vomiting, and nystagmus (especially in children)  ';
-        this.note = ': ½ the dose when combined with Opiods.';
+        this.note = ': ½ the dose when combined with Opioids.';
         this.dose = [
           '●	Status seizure:',
           'o	Adult (>5min duration):',
@@ -955,15 +952,15 @@ export class DrugsContentService {
         this.indication =
           'Control of pain associated with angina pectoris/myocardial infarction	and relief of pulmonary edema caused by left-sided heart failure. ';
         this.contradiction =
-          'Hypersensitivity/allergy to nitroglycerin, other nitrates or nitrites.<br>Do not give with an Inferior wall MI.';
+          'Hypersensitivity/allergy to nitroglycerin, other nitrates or nitrites.<br>Do not give with an Inferior wall MI. - Leads 2, 3, AVf';
         this.precaution =
-          'If patient is wearing a nitroglycerin patch or paste, an additional administration may not be appropriate. If patient is taking prescribed Viagra, consult medical control regarding nitro administration prior to giving. ';
+          'If a patient is wearing a nitroglycerin patch or paste, an additional administration may not be appropriate. If patient is taking prescribed Viagra, consult medical control regarding nitro administration prior to giving. ';
         this.effect =
           'Headache, transient episodes of lightheadedness related to blood pressure changes, hypotension, syncope, crescendo angina, rebound hypertension, and anaphylactoid reactions. Abd pain and vomiting may also be seen.';
-        this.note = 'Obtain 12 lead prior to dosing. ';
+        this.note = 'Obtain patent IV and 12 lead prior to dosing. ';
         this.dose = [
           '●	One tablet S.L. 0.4 mg ',
-          '●	May repeat same dosage every 5 minutes x 3 if SBP remains 110 or greater if medical control gives authorization. ',
+          '●	May repeat the same dosage every 5 minutes x 3 if SBP remains 110 or greater if medical control gives authorization. ',
           '●	Treat any hypotension with fluid boluses',
         ];
         this.consideration = null;
@@ -1013,7 +1010,7 @@ export class DrugsContentService {
           },
         ];
         this.action =
-          'Stimulates beta1 and alpha1 receptors in sympathetic nervous system, causing vasoconstriction, increased blood pressure, enhanced contractility, and decreased heart rate';
+          'Stimulates beta1 and alpha1 receptors in the sympathetic nervous system, causing vasoconstriction, increased blood pressure, enhanced contractility, and decreased heart rate';
         this.indication =
           'Severe hypotension- due to cardiogenic, septic, or neurogenic shock either refractory to intravascular fluid boluses or in which intravascular fluid bolusing is contraindicated (e.g. pulmonary edema).';
         this.contradiction =
@@ -1030,7 +1027,7 @@ export class DrugsContentService {
         ];
 
         this.note =
-          'Overdosage with norepinephrine may result in headache, severe hypertension, reflex bradycardia, marked increase in peripheral resistance, and decreased cardiac output. In case of accidental overdosage, as evidenced by excessive blood pressure elevation, discontinue norepinephrine until the condition of the patient stabilizes. ';
+          'Overdosage with norepinephrine may result in headache, severe hypertension, reflex bradycardia, marked increase in peripheral resistance, and decreased cardiac output. In case of accidental overdose, as evidenced by excessive blood pressure elevation, discontinue norepinephrine until the condition of the patient stabilizes. ';
         this.consideration = null;
         this.htm = null;
         break;
@@ -1073,7 +1070,7 @@ export class DrugsContentService {
         ];
         this.action = 'Increases blood sugar levels ';
         this.indication =
-          'Patient meets all of the following criteria:<br>●	Altered mental status - Known history of diabetes mellitus ';
+                'Patient meets all of the following criteria:<br>●	Altered mental status <br>● Known history of diabetes mellitus ';
         this.contradiction =
           'Unconsciousness, known diabetic who has not taken insulin for days, patient who is unable to swallow';
         this.effect =
@@ -1205,7 +1202,7 @@ export class DrugsContentService {
           },
         ];
         this.action =
-          'Tranexamic acid is an anti-fibrinolytic agent that inhibits the conversion of plasminogen to plasmin and at the same time acts as a weak non-competitive inhibitor of plasmin thus arresting fibrinolysis. As a result, a stable clot can be formed, and blood loss is reduced. TXA needs to be given broadly to save the most lives, so clinical judgement based on assessment is crucial. When given within 3 hrs. of injury risk of bleeding death drops by 1/3. Studies have demonstrated improved outcomes when the interval from injury to administration is decreased, therefore early administration is recommended. ';
+          'Tranexamic acid is an anti-fibrinolytic agent that inhibits the conversion of plasminogen to plasmin and at the same time acts as a weak non-competitive inhibitor of plasmin thus arresting fibrinolysis. As a result, a stable clot can be formed, and blood loss is reduced. TXA needs to be given broadly to save the most lives, so clinical judgement based on assessment is crucial. When given within 3 hrs. of injury the risk of bleeding death drops by 1/3. Studies have demonstrated improved outcomes when the interval from injury to administration is decreased, therefore early administration is recommended. ';
         this.indication =
           '●	Blunt or penetrating trauma patient’s ≥ 14 years of age, at high risk of ongoing internal hemorrhage or significant external bleeding, that meet the following:<br>o	Injury sustained within 3 hrs. prior to administration. TXA must be administered within 3 hrs. of injury. Administer as early as possible following gross bleeding control and other lifesaving interventions.<br>o	Systolic BP < 90mmHg and signs of ongoing hemorrhage, AND/OR<br>o	Tachycardia > 110bpm with signs of hypoperfusion (altered mental status, pallor, cool extremities) and signs of ongoing hemorrhage.<br>o	Considered in paramedics judgement to be at high risk of significant hemorrhage.<br>●	Also indicated for excessive hemorrhage following delivery or delayed placenta delivery if within 3 hours of delivery. ';
         this.contradiction =

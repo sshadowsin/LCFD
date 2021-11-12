@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CategoryContentPageRoutingModule } from './category-content-routing.module';
 
 import { CategoryContentPage } from './category-content.page';
+import { HighlightPipe } from 'src/app/models/text-highlight';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { CategoryContentPage } from './category-content.page';
     IonicModule,
     CategoryContentPageRoutingModule,
   ],
-  declarations: [CategoryContentPage],
+  declarations: [CategoryContentPage, HighlightPipe],
+  // providers: [HighlightPipe]
 })
 export class CategoryContentPageModule {}

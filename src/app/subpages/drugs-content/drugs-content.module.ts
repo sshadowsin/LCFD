@@ -8,7 +8,7 @@ import { DrugsContentPageRoutingModule } from './drugs-content-routing.module';
 
 import { DrugsContentPage } from './drugs-content.page';
 
-import { HighlightPipe } from 'src/app/models/text-highlight2';
+import { HighlightPipe } from 'src/app/models/text-highlight';
 
 @NgModule({
   imports: [
