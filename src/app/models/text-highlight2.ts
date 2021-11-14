@@ -1,7 +1,7 @@
 import { PipeTransform, Pipe } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-@Pipe({ name: 'highlight' })
+@Pipe({ name: 'highlight2' })
 
 export class HighlightPipe implements PipeTransform {
   noMatch: string;

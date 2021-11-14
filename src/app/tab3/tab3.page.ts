@@ -11,7 +11,7 @@ export class Tab3Page {
 
   protocols = [
     {
-      name: 'Introduction to CCEMS Protocols',
+      name: 'Introduction to LCFD Protocols',
       level: 0,
     },
     {

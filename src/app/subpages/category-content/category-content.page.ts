@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, Platform } from '@ionic/angular';
 import { CategoryItemService } from 'src/app/services/category-item.service';
-// import { HighlightPipe } from 'src/app/models/text-highlight';
 import { Location } from '@angular/common';
 
 @Component({
