@@ -11,7 +11,7 @@ export class Tab3Page {
 
   protocols = [
     {
-      name: 'Introduction to LCFD Protocols',
+      name: 'Introduction to Logan City Fire Dept. Protocols',
       level: 0,
     },
     {
