@@ -21,5 +21,7 @@ export class Tab4Page implements OnInit {
     this.authService.signOut();
     this.navCtrl.navigateRoot('signin');
   }
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 }

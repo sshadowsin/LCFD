@@ -47,5 +47,18 @@ export class ProtocolsContentPage implements OnInit {
     this.location.back();
   }
 
+  epi_drip_rate_table=[
+    {ml_per_hr:30},
+    {ml_per_hr:60},
+    {ml_per_hr:90},
+    {ml_per_hr:120},
+    {ml_per_hr:150},
+    {ml_per_hr:180},
+    {ml_per_hr:210},
+    {ml_per_hr:240},
+    {ml_per_hr:270},
+    {ml_per_hr:300},
+  ];
+
 
 }
