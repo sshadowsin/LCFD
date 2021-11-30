@@ -92,8 +92,8 @@ export class DrugsContentService {
         this.effect =
           'Tachycardia, hypertension, bronchospasm, bronchitis, nasal congestion, tremors, dizziness, nervousness, headache, and sleeplessness. ';
         this.consideration = [
-          '⮚	Consult OLMC if baseline heart rate > 100 and increases more than 20 BPM ( this way OLMC can make the decision to give or not instead of the guys doing nothing).',
-          '⮚	Consult OLMC if systolic blood pressure Systolic BP > 180 or Diastolic BP > 100   ( same thought)',
+          '⮚	Consult OLMC if baseline heart rate > 100 and increases more than 20 BPM.',
+          '⮚	Consult OLMC if systolic blood pressure Systolic BP > 180 or Diastolic BP > 100.',
           '⮚	Monitor vital signs before and after treatment.',
         ];
         this.dose = [
@@ -1049,7 +1049,7 @@ export class DrugsContentService {
         this.precaution =
           'Use with caution in patients with impaired liver function. Rate of administration should not be less than 30 seconds but preferably over 2 to 5 minutes. NOTE: Zofran has no effect on motion sickness.';
         this.effect =
-          'Headache, dizziness, diarrhea, may cause pain at injection site.';
+          'Headache, dizziness, diarrhea, may cause pain at the injection site.';
         this.dose = [
           '●	Adult: 4 mg IV (over 2-5 minutes) OR 4 mg IM injection OR 4 mg ODT. May repeat up to 8 mg with medical control approval in 5-10 minutes.',
           '●	Pediatric: 0.1 mg/kg IV/IM. Max dose 4mg. NOT TO BE USED IN PATIENT’S UNDER 1 YRS OF AGE ',
