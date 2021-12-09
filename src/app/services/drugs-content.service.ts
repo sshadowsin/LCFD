@@ -1211,7 +1211,7 @@ export class DrugsContentService {
           '●	Notify receiving hospital of TXA administration.<br>●	Clearly document mechanism of injury, time injury/incident occurred, indications for administration and time of administration of TXA.<br>●	TXA should NEVER be administered at a “wide open” rate. ';
         this.effect =
           ' Hypotension (with rapid IV injection), Seizures in high doses (>2-10 grams), allergic dermatitis, diarrhea, nausea, vomiting, blurred vision. ';
-        this.dose = ['Mix 1g/1000 ml of TXA in 100ml NS. Infuse over 10 min'];
+        this.dose = ['Mix 1g/10 ml of TXA in 100ml NS. Infuse over 10 min'];
         this.consideration = null;
         this.note = null;
         this.htm = null;
