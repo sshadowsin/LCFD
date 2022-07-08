@@ -82,6 +82,7 @@ export class Tab3Page {
     { name: 'Protocol 36: NON-ACCIDENTAL TRAUMA/ABUSE', level: 36 },
     { name: 'Protocol 37: SNAKE BITES', level: 37 },
     { name: 'Protocol 38: SPINAL MOTION RESTRICTION (SMR)', level: 38 },
+    { name: 'Protocol 39: GENERAL PATIENT CARE', level: 39 },
   ];
   constructor(private navCtrl: NavController, private platform: Platform) {
     this.platform.backButton.subscribe(() => {

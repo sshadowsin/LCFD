@@ -219,6 +219,7 @@ export class CategoryItemService {
           'Protocol 36: NON-ACCIDENTAL TRAUMA/ABUSE',
           'Protocol 37: SNAKE BITES',
           'Protocol 38: SPINAL MOTION RESTRICTION (SMR)',
+          'Protocol 39: GENERAL PATIENT CARE'
         ];
         break;
 
