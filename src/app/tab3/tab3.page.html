@@ -28,6 +28,7 @@
     <h1 class="text-center f-1 mx-1" *ngIf=" i===9 && !searchTerm2">CARDIAC PATIENT CARE GUIDELINES</h1>
     <h1 class="text-center f-1 mx-1" *ngIf=" i===16 && !searchTerm2">MEDICAL PATIENT CARE GUIDELINES</h1>
     <h1 class="text-center f-1 mx-1" *ngIf=" i===31 && !searchTerm2">TRAUMA PATIENT CARE GUIDELINES</h1>
+    <h1 class="text-center f-1 mx-1" *ngIf=" i===39 && !searchTerm2">REFERENCES PROTOCOL</h1>
     <ion-item (click)="openProtocol('inside/tabs/protocols-content/'+ protocol.level)" lines="none" class="proto-div">
       <ion-label>{{protocol.name}}</ion-label>
       <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
@@ -38,7 +39,6 @@
 
   <!-- <div>
     <h1 class="text-center f-1">General Patient Care Guidelines</h1>
-
     <div *ngFor="let protocol of protocols | filter:searchTerm; let i = index;">
       <div *ngIf=" i>0 && i<9">
         <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
@@ -47,12 +47,9 @@
         </ion-item>
       </div>
     </div>
-
   </div>
-
   <div>
     <h1 class="text-center f-1">CARDIAC PATIENT CARE GUIDELINES</h1>
-
     <div *ngFor="let protocol of protocols; let i = index;">
       <div *ngIf=" i>8 && i<16">
         <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
@@ -61,11 +58,9 @@
         </ion-item>
       </div>
     </div>
-
   </div>
   <div>
     <h1 class="text-center f-1">MEDICAL PATIENT CARE GUIDELINES</h1>
-
     <div *ngFor="let protocol of protocols; let i = index;">
       <div *ngIf=" i>15 && i<31">
         <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
@@ -74,11 +69,9 @@
         </ion-item>
       </div>
     </div>
-
   </div>
   <div>
     <h1 class="text-center f-1">TRAUMA PATIENT CARE GUIDELINES</h1>
-
     <div *ngFor="let protocol of protocols; let i = index;">
       <div *ngIf=" i>30 && i<39">
         <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
@@ -87,7 +80,17 @@
         </ion-item>
       </div>
     </div>
-
+  </div>
+  <div>
+    <h1 class="text-center f-1">REFERENCE PROTOCOLS</h1>
+    <div *ngFor="let protocol of protocols; let i = index;">
+      <div *ngIf=" i>38 && i<43">
+        <ion-item lines="none" class="proto-div" (click)="openProtocol('protocols-content/'+i)">
+          <ion-label>{{protocol}}</ion-label>
+          <ion-icon name="document-text-outline" slot="start" size="large"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
   </div> -->
 
 </ion-content>

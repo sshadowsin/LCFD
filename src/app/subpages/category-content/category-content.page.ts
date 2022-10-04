@@ -37,7 +37,6 @@ export class CategoryContentPage implements OnInit {
       case '1':
         this.protocolLevel = 1;
         break;
-
       case '2':
         this.protocolLevel = 9;
         break;
@@ -47,7 +46,10 @@ export class CategoryContentPage implements OnInit {
       case '4':
         this.protocolLevel = 31;
         break;
-
+      case '5':
+        this.protocolLevel = 39;
+        break;
+        
       default:
         this.protocolLevel = 0;
         break;

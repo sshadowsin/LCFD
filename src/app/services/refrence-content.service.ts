@@ -66,7 +66,30 @@ export class RefrenceContentService {
         this.headings = [''];
         this.contacts = null;
         break;
-
+      case '7':
+          this.name = 'Trauma Level Criteria (I, II, III)';
+          this.images = ['2022.jpg'];
+          this.headings = [''];
+          this.contacts = null;
+          break;  
+      case '8':
+        this.name = '913: Needle Decompression Prodecure';
+        this.images = ['913ND.pdf'];
+        this.headings = [' '];
+        this.contacts = null;
+        break;
+      case '9':
+        this.name = '914: I/O Procedure';
+        this.images = ['914IO1.pdf', '914IO2.pdf', '914IO3.pdf', '914IO4.pdf', '914IO5.pdf', '914IO6.pdf', '914IO7.pdf'];
+        this.headings = ['-', '-', '-', '-', '-', '-', '-'];
+        this.contacts = null;
+        break;
+      case '10':
+          this.name = '915: Sucking Chest Wound Procedure';
+          this.images = ['915Suck.pdf'];
+          this.headings = [''];
+          this.contacts = null;
+          break;  
       default:
         this.name = 'Default';
         this.images = null;
