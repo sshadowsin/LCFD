@@ -219,7 +219,38 @@ export class CategoryItemService {
           'Protocol 36: NON-ACCIDENTAL TRAUMA/ABUSE',
           'Protocol 37: SNAKE BITES',
           'Protocol 38: SPINAL MOTION RESTRICTION (SMR)',
-          'Protocol 39: GENERAL PATIENT CARE'
+        ];
+        break;
+
+        case '5':
+        this.name = 'Reference Protocols';
+        this.introduction = false;
+        this.discription =
+          'These protocols are to be used as a guide for their specified purpose.';
+        this.subPointsHeading = [
+          ''
+        ];
+        this.subPoints = [
+          {
+            points: [
+              '',
+            ],
+          },
+          {
+            points: [
+              '',
+            ],
+          },
+        ];
+        this.footerText =
+          '';
+
+
+        this.protocols = [
+          'Protocol 39: GENERAL PATIENT CARE',
+          'Protocol 40: AT SCENE RELEASE',
+          'Protocol 41: MEDICAL DESTINATION PROTOCOL',
+          'Protocol 42: TRAUMA DESITNATION PROTOCOL',
         ];
         break;
 
